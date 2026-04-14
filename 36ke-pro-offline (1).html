@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>36 Kế Pro Ngô Cương 0909877386  — Hệ Điều Hành Chiến Lược & Tư Duy</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0e1a;--card:#141825;--card2:#1a1f30;--border:#252a3a;--gold:#d4a017;--gold2:#f0c040;--text:#e0e0e0;--text2:#888;--red:#ef4444;--green:#22c55e;--blue:#3b82f6;--purple:#a855f7;--teal:#14b8a6;--radius:12px;--shadow:0 2px 12px rgba(0,0,0,.3)}
+body{font-family:'Segoe UI',-apple-system,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+body.light{--bg:#f0f2f5;--card:#fff;--card2:#f8f9fa;--border:#ddd;--text:#1a1a2e;--text2:#666;--shadow:0 2px 12px rgba(0,0,0,.08)}
+::-webkit-scrollbar{width:7px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
+button{font-family:inherit}
+.container{max-width:1140px;margin:0 auto;padding:0 16px}
+#header{background:var(--card);border-bottom:2px solid var(--gold);position:sticky;top:0;z-index:200;padding:10px 0}
+#header .inner{display:flex;justify-content:space-between;align-items:center}
+#header .logo{font-size:20px;font-weight:800;color:var(--gold);display:flex;align-items:center;gap:8px}
+#header .stats{display:flex;gap:10px;align-items:center;font-size:13px}
+#header .stats .pill{background:var(--gold);color:#000;padding:3px 10px;border-radius:12px;font-weight:700;font-size:12px}
+#tabs{background:var(--card);border-bottom:1px solid var(--border);overflow-x:auto;white-space:nowrap;position:sticky;top:50px;z-index:190}
+#tabs .inner{display:flex}
+.tab{padding:11px 14px;border:none;background:none;color:var(--text2);font-size:12.5px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;transition:.2s;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.tab:hover{color:var(--gold)}.tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-bottom:14px;transition:.2s}
+.card:hover{border-color:var(--gold);box-shadow:var(--shadow)}
+.card h3{color:var(--gold);font-size:15px;margin-bottom:10px}
+.card h4{color:var(--gold);font-size:13.5px;margin-bottom:6px}
+.btn{padding:10px 20px;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:13px;transition:.2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:#000}.btn-gold:hover{background:var(--gold2)}
+.btn-outline{background:none;color:var(--gold);border:2px solid var(--gold)}.btn-outline:hover{background:var(--gold);color:#000}
+.btn-red{background:var(--red);color:#fff}.btn-green{background:var(--green);color:#000}
+.btn-sm{padding:6px 14px;font-size:12px}
+.badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
+.grid{display:grid;gap:14px}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.stat{text-align:center;padding:20px;border-radius:var(--radius);color:#000}
+.stat .val{font-size:32px;font-weight:800}
+.stat .lbl{font-size:11px;opacity:.7;font-weight:600;text-transform:uppercase;margin-bottom:6px}
+.pbar{height:6px;background:rgba(0,0,0,.15);border-radius:3px;margin-top:8px;overflow:hidden}
+.pbar .fill{height:100%;border-radius:3px;transition:width .5s}
+.inp{width:100%;padding:11px 16px;background:var(--card2);color:var(--text);border:1px solid var(--border);border-radius:24px;font-size:14px;outline:none;transition:.2s}
+.inp:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,160,23,.15)}
+textarea.inp{border-radius:var(--radius);min-height:80px;resize:vertical}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.fpill{padding:7px 14px;border:2px solid var(--border);background:none;color:var(--text2);border-radius:20px;cursor:pointer;font-size:12px;font-weight:600;transition:.2s}
+.fpill:hover{border-color:var(--gold);color:var(--gold)}
+.fpill.active{background:var(--gold);color:#000;border-color:var(--gold)}
+.section-title{color:var(--gold);font-size:17px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.ke-card{position:relative;cursor:pointer;transition:.3s}
+.ke-card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 8px 24px rgba(212,160,23,.15)}
+.ke-num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--gold);color:#000;font-weight:800;font-size:14px}
+.ke-title{font-size:15px;font-weight:700;margin:8px 0 4px}
+.ke-meaning{font-size:12px;opacity:.6;font-style:italic}
+.detail-section{padding:14px;background:var(--card2);border-radius:var(--radius);margin-bottom:12px;border-left:3px solid var(--gold)}
+.detail-section h4{color:var(--gold);margin-bottom:8px;font-size:13.5px}
+.detail-section p,.detail-section li{font-size:14px;line-height:1.7}
+.flash-card{min-height:240px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;border:2px solid var(--gold);padding:32px;border-radius:16px;background:var(--card);transition:.3s}
+.flash-card:hover{box-shadow:0 12px 40px rgba(212,160,23,.2)}
+.quiz-opt{padding:12px 16px;border:2px solid var(--border);border-radius:8px;cursor:pointer;text-align:left;font-size:14px;transition:.2s;background:var(--card2);margin-bottom:8px}
+.quiz-opt:hover{border-color:var(--gold);background:rgba(212,160,23,.05)}
+.quiz-opt.correct{border-color:var(--green);background:rgba(34,197,94,.1)}
+.quiz-opt.wrong{border-color:var(--red);background:rgba(239,68,68,.1)}
+.chk{display:flex;gap:10px;padding:12px;background:var(--card2);border-radius:8px;margin-bottom:8px;border-left:3px solid var(--gold);align-items:flex-start}
+.chk input{width:18px;height:18px;margin-top:2px;accent-color:var(--green);cursor:pointer;flex-shrink:0}
+.modal-bg{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:300;justify-content:center;align-items:flex-start;padding:20px;overflow-y:auto}
+.modal-bg.show{display:flex}
+.modal{background:var(--card);border-radius:16px;max-width:720px;width:100%;padding:28px;position:relative;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.modal .close{position:sticky;top:0;float:right;width:36px;height:36px;border-radius:50%;background:var(--gold);color:#000;border:none;font-size:18px;cursor:pointer;font-weight:800;z-index:10}
+.day-card{cursor:pointer;border-left:4px solid var(--gold);transition:.3s}
+.day-card:hover{transform:translateX(4px);border-color:var(--gold2)}
+.day-card.done{opacity:.7;border-left-color:var(--green)}
+@media(max-width:768px){.grid-3{grid-template-columns:1fr}.grid-4{grid-template-columns:repeat(2,1fr)}.tab{padding:10px 10px;font-size:11.5px}#header .logo{font-size:16px}}
+</style>
+</head>
+<body>
+<div id="header"><div class="container inner">
+<div class="logo">⚔️ 36 KẾ PRO</div>
+<div class="stats"><span id="hStreak">🔥 0</span><span class="pill" id="hPct">0%</span></div>
+</div></div>
+<div id="tabs"><div class="container inner" id="tabBar"></div></div>
+<div class="container" style="padding-top:20px;padding-bottom:60px" id="main"></div>
+<div class="modal-bg" id="modalBg" onclick="if(event.target===this)closeModal()">
+<div class="modal" id="modalContent"></div>
+</div>
+
+<script>
+// ===== STATE =====
+const LS='ke36pro_v3';
+let S={completed:[],bookmarks:[],notes:{},streak:0,lastDate:'',theme:'dark',daysDone:[],quizHistory:[],hardCards:[],notebook:[],lastViewed:null};
+function load(){try{const d=JSON.parse(localStorage.getItem(LS));if(d)Object.assign(S,d)}catch(e){}}
+function save(){try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){}}
+function markToday(){const t=new Date().toDateString();if(S.lastDate!==t){const l=S.lastDate?new Date(S.lastDate):null;if(l&&Math.floor((new Date()-l)/864e5)>1)S.streak=0;S.streak++;S.lastDate=t;save();render()}}
+load();
+
+// ===== GROUPS =====
+const GROUPS=[
+{id:'I',name:'Thắng Chiến Kế',desc:'Dùng khi đang có thế',color:'#d4a017',icon:'⚔️'},
+{id:'II',name:'Địch Chiến Kế',desc:'Dùng khi giằng co',color:'#14b8a6',icon:'🤝'},
+{id:'III',name:'Công Chiến Kế',desc:'Chủ động tấn công',color:'#ef4444',icon:'🎯'},
+{id:'IV',name:'Hỗn Chiến Kế',desc:'Cục diện rối',color:'#a855f7',icon:'🌀'},
+{id:'V',name:'Tịnh Chiến Kế',desc:'Giữ thế cờ lớn',color:'#3b82f6',icon:'♟️'},
+{id:'VI',name:'Bại Chiến Kế',desc:'Khi yếu hoặc bất lợi',color:'#f97316',icon:'🛡️'}
+];
+
+// ===== KE DATA (kept from previous version - abbreviated for space) =====
+const KE=[
+{id:1,g:'I',n:'Man thiên quá hải',m:'Che trời qua biển',han:'瞒天过海',essence:'Làm việc lớn dưới lớp vỏ bình thường.',remember:'Bình thường hóa để vượt qua.',keywords:['ẩn','kín đáo'],related:[6,8,27],questions:['Lộ bài quá sớm?','Kín đáo hay thiếu minh bạch?','Tiếng ồn hay chuyển động thật?']},
+{id:2,g:'I',n:'Vi Ngụy cứu Triệu',m:'Vây Ngụy cứu Triệu',han:'围魏救赵',essence:'Đánh nơi buộc đối phương phải đổi vị trí.',remember:'Đánh chỗ buộc phải cứu.',keywords:['gián tiếp','nút thắt'],related:[18,19,15],questions:['Điểm gốc?','Trực diện vì tự ái?','Đổi mặt trận?']},
+{id:3,g:'I',n:'Tá đao sát nhân',m:'Mượn dao giết người',han:'借刀杀人',essence:'Dùng lực hệ thống thay vì tự ôm.',remember:'Đòn bẩy nâng tảng đá.',keywords:['đòn bẩy','hệ thống'],related:[17,25,5],questions:['Lãng phí sức?','Mượn lực khác dựa dẫm?','Luật chơi thay cảm xúc?']},
+{id:4,g:'I',n:'Dĩ dật đãi lao',m:'Lấy nhàn chờ mệt',han:'以逸待劳',essence:'Lợi thế từ nhịp độ, sức bền, chuẩn bị.',remember:'Đừng thi sức ở phút đầu.',keywords:['giữ lực','kiên nhẫn'],related:[9,27,32],questions:['Mệt vì sai nhịp?','Ở đâu nên chờ?','Kiên nhẫn chủ động?']},
+{id:5,g:'I',n:'Sấn hỏa đả kiếp',m:'Thừa lửa mà cướp',han:'趁火打劫',essence:'Hệ thống rối → cơ hội mở.',remember:'Ai tỉnh là người giàu.',keywords:['cơ hội','biến động'],related:[20,12,30],questions:['Rủi ro hay cơ hội?','Cơ hội mở ngắn?','Bỏ lỡ vì gì?']},
+{id:6,g:'I',n:'Thanh đông kích tây',m:'Hô đông đánh tây',han:'声东击西',essence:'Chuyển hướng chú ý để đạt mục tiêu thật.',remember:'Chú ý ≠ mục tiêu thật.',keywords:['chú ý','nghi binh'],related:[1,8,24],questions:['Bị dẫn bởi gì?','Trọng tâm ở đâu?','Chú ý lẫn bản chất?']},
+{id:7,g:'II',n:'Vô trung sinh hữu',m:'Từ không tạo có',han:'无中生有',essence:'Sức mạnh của nhận thức và câu chuyện.',remember:'Hình dung rõ → có lực.',keywords:['prototype','câu chuyện'],related:[29,17,8],questions:['Có sức nặng vì sao?','Thiếu lực hay thiếu hình?','Sáng tạo hay hư ảo?']},
+{id:8,g:'II',n:'Ám độ Trần Thương',m:'Lén qua Trần Thương',han:'暗渡陈仓',essence:'Đường vòng là đường ngắn nhất.',remember:'Cửa chính khóa → cửa hông.',keywords:['đường vòng','pilot'],related:[1,6,24],questions:['Chấp nhất 1 lối?','Đường vòng hiệu quả?','Hành lang phụ?']},
+{id:9,g:'II',n:'Cách ngạn quan hỏa',m:'Ngồi bờ xem lửa',han:'隔岸观火',essence:'Tỉnh táo khi chưa cần nhảy vào.',remember:'Không phải cháy nào là việc mình.',keywords:['quan sát','tự lộ'],related:[4,27,20],questions:['Phản ứng vì gì?','Đứng ngoài là hèn?','Quan sát đủ chưa?']},
+{id:10,g:'II',n:'Tiếu lý tàng đao',m:'Cười ngoài giấu dao',han:'笑里藏刀',essence:'Nguy hiểm không đi cùng vẻ mặt nguy hiểm.',remember:'Đọc cam kết, không đọc cảm xúc.',keywords:['đọc người','văn bản'],related:[31,33,16],questions:['Đánh giá qua lời hay hành vi?','Mềm mỏng là vỏ?','Tử tế mà tỉnh?']},
+{id:11,g:'II',n:'Lý đại đào cương',m:'Mận chết thay đào',han:'李代桃僵',essence:'Mất nhỏ giữ lõi.',remember:'Giữ lại chưa chắc khôn.',keywords:['hy sinh','cốt lõi'],related:[36,19,25],questions:['Lõi là gì?','Tiếc vì cảm xúc?','Bỏ nhỏ cứu gì?']},
+{id:12,g:'II',n:'Thuận thủ khiên dương',m:'Thuận tay dắt dê',han:'顺手牵羊',essence:'Nhặt cơ hội nhỏ đúng lúc.',remember:'Việc nhỏ đúng lúc → quán tính lớn.',keywords:['cơ hội nhỏ','tích lũy'],related:[5,17,30],questions:['Xem thường bước nhỏ?','Chần chừ mất gì?','Sạch hay tham?']},
+{id:13,g:'III',n:'Đả thảo kinh xà',m:'Đập cỏ rắn sợ',han:'打草惊蛇',essence:'Thử nghiệm nhỏ dò phản ứng.',remember:'Test trước, kết luận sau.',keywords:['test','thăm dò'],related:[7,17,20],questions:['Đoán hay thử?','Tín hiệu nhỏ lộ gì?','Thăm dò phản tác dụng?']},
+{id:14,g:'III',n:'Tá thi hoàn hồn',m:'Mượn xác hoàn hồn',han:'借尸还魂',essence:'Làm mới cái cũ tạo giá trị mới.',remember:'Đánh thức cái có sẵn.',keywords:['tái sử dụng','hồi sinh'],related:[21,29,17],questions:['Bỏ quên tài nguyên?','Vì sao coi nhẹ cũ?','Mới khác copy?']},
+{id:15,g:'III',n:'Điệu hổ ly sơn',m:'Dụ hổ rời núi',han:'调虎离山',essence:'Kéo đối phương khỏi sân mạnh.',remember:'Đổi sân là đổi lực.',keywords:['đổi sân','lợi thế'],related:[2,6,8],questions:['Thua vì sân?','Sân nào phù hợp?','Đổi sân không lộ?']},
+{id:16,g:'III',n:'Dục cầm cố túng',m:'Muốn bắt phải thả',han:'欲擒故纵',essence:'Buông đúng mức → tự bộc lộ.',remember:'Buông có chủ đích = kiểm soát cao.',keywords:['buông','giao quyền'],related:[10,28,31],questions:['Kiểm soát quá mức?','Buông khác bỏ?','Thả mất kiểm soát?']},
+{id:17,g:'III',n:'Phao chuyên dẫn ngọc',m:'Ném gạch gọi ngọc',han:'抛砖引玉',essence:'Cho trước giá trị nhỏ kéo lớn.',remember:'Cho đúng thứ → mở đúng cửa.',keywords:['cho trước','demo'],related:[29,7,8],questions:['Chưa ném gạch?','Mồi chất lượng?','Mồi mất giá trị?']},
+{id:18,g:'III',n:'Cầm tặc cầm vương',m:'Bắt giặc bắt vua',han:'擒贼擒王',essence:'Xử đầu mối, không sa tiểu tiết.',remember:'Giải gốc, đừng vá lỗi.',keywords:['nút thắt','gốc rễ'],related:[2,19,25],questions:['Vua là gì?','Sửa lá hay rễ?','Giải nút → đổi gì?']},
+{id:19,g:'IV',n:'Phủ để trừu tân',m:'Rút củi đáy nồi',han:'釜底抽薪',essence:'Triệt nguồn nuôi vấn đề.',remember:'Rút củi, đừng dập lửa.',keywords:['cắt nguồn','dứt điểm'],related:[2,18,25],questions:['Sống nhờ gì?','Dập lửa hay rút củi?','Nguồn vô hình?']},
+{id:20,g:'IV',n:'Hỗn thủy mạc ngư',m:'Đục nước thả câu',han:'混水摸鱼',essence:'Khi mờ, ai rõ ràng sẽ dẫn.',remember:'Mờ đục → rõ ràng = quyền lực.',keywords:['rõ ràng','hỗn loạn'],related:[5,9,30],questions:['Co lại hay chủ động?','Rõ ràng = lợi thế?','Cơ hội hay trục lợi?']},
+{id:21,g:'IV',n:'Kim thiền thoát xác',m:'Ve sầu lột xác',han:'金蝉脱壳',essence:'Rút khỏi hình hài cũ, giữ phần sống.',remember:'Lột xác = cứu mình.',keywords:['lột xác','rebrand'],related:[14,36,25],questions:['Đồng nhất vỏ nào?','Bỏ mất bản chất?','Đổi không đổ vỡ?']},
+{id:22,g:'IV',n:'Quan môn tróc tặc',m:'Đóng cửa bắt giặc',han:'关门捉贼',essence:'Khoanh phạm vi xử dứt điểm.',remember:'Khoanh đúng → giải gọn.',keywords:['cô lập','khoanh vùng'],related:[18,19,23],questions:['Thoát đường nào?','Để sai lan?','Cô lập khác bịt miệng?']},
+{id:23,g:'IV',n:'Viễn giao cận công',m:'Xa kết gần đánh',han:'远交近攻',essence:'Ưu tiên xử mối gần trước.',remember:'Đừng bỏ cháy nhà đi dập rừng xa.',keywords:['ưu tiên','tập trung'],related:[11,4,22],questions:['Né cái gần?','Xa hòa hoãn?','Ưu tiên thực tế?']},
+{id:24,g:'IV',n:'Giả đạo phạt Quắc',m:'Mượn đường diệt Quắc',han:'假道伐虢',essence:'Mục tiêu phụ = hành lang cho chính.',remember:'Hành lang đúng → phòng đúng.',keywords:['mượn đường','tiếp cận'],related:[8,6,3],questions:['Phụ mở đường?','Minh bạch đủ?','Phụ nuốt chính?']},
+{id:25,g:'V',n:'Thâu lương hoán trụ',m:'Đánh tráo xà cột',han:'偷梁换柱',essence:'Thay cấu trúc nền → đổi toàn bộ.',remember:'Sửa khung trước sơn tường.',keywords:['cấu trúc','KPI'],related:[18,19,30],questions:['Xà cột là gì?','Sửa ngọn sao?','Đổi gốc → gì thay?']},
+{id:26,g:'V',n:'Chỉ tang mạ hòe',m:'Chỉ dâu mắng hòe',han:'指桑骂槐',essence:'Góp ý gián tiếp giữ thể diện.',remember:'Sửa việc, không mất mặt.',keywords:['gián tiếp','góp ý'],related:[27,10,33],questions:['Thẳng hay gián tiếp?','Gián tiếp rõ?','Góp ý hay mỉa?']},
+{id:27,g:'V',n:'Giả si bất điên',m:'Giả ngốc không điên',han:'假痴不癫',essence:'Biết mà không cần khoe.',remember:'Biết không cần biểu diễn.',keywords:['khiêm tốn','quan sát'],related:[4,9,32],questions:['Nói để giá trị hay chứng tỏ?','Giá khôn sớm?','Im thông minh?']},
+{id:28,g:'V',n:'Thượng ốc trừu thê',m:'Lên mái rút thang',han:'上屋抽梯',essence:'Tạo cam kết không lùi.',remember:'Cam kết thật có giá thật.',keywords:['cam kết','kỷ luật'],related:[36,4,11],questions:['Thiếu lực hay nhiều đường lui?','Khôn hay liều?','Cần cửa thoát?']},
+{id:29,g:'V',n:'Thụ thượng khai hoa',m:'Cây khô nở hoa',han:'树上开花',essence:'Giá trị thật cần trình bày xứng đáng.',remember:'Giá trị cần hình thức xứng.',keywords:['trình bày','proposal'],related:[7,17,30],questions:['Thiếu giá trị hay biểu đạt?','Đẹp khác đánh bóng?','Tin từ hình thức?']},
+{id:30,g:'V',n:'Phản khách vi chủ',m:'Khách thành chủ',han:'反客为主',essence:'Từ bị động sang chủ động.',remember:'Ảnh hưởng từ nắm nhịp.',keywords:['chủ động','dẫn dắt'],related:[3,25,20],questions:['Khách hay hành xử khách?','Khi nào dẫn dắt?','Chủ động không lấn lướt?']},
+{id:31,g:'VI',n:'Mỹ nhân kế',m:'Kế dùng sắc đẹp',han:'美人计',essence:'Cảm xúc làm lệch phán đoán.',remember:'Không để cám dỗ lái tay lái.',keywords:['cảm xúc','tỉnh táo'],related:[10,16,34],questions:['Điểm yếu cảm xúc?','Đẹp lệch chuẩn?','Tiêu chí trước cảm xúc?']},
+{id:32,g:'VI',n:'Không thành kế',m:'Kế thành trống',han:'空城计',essence:'Bình tĩnh giữ thế khi yếu.',remember:'Yếu mà loạn = thua kép.',keywords:['bình tĩnh','khủng hoảng'],related:[4,27,36],questions:['Lộ sợ nhanh?','Bình tĩnh thật?','Xin hỗ trợ?']},
+{id:33,g:'VI',n:'Phản gián kế',m:'Kế phản gián',han:'反间计',essence:'Quản trị thông tin, chống tin đồn.',remember:'Chưa kiểm → chưa hành động.',keywords:['thông tin','kiểm chứng'],related:[10,26,35],questions:['Tin vì bằng chứng?','Tin đồn sống nhờ?','Không phát tán?']},
+{id:34,g:'VI',n:'Khổ nhục kế',m:'Kế khổ nhục',han:'苦肉计',essence:'Thiệt ngắn → lợi dài.',remember:'Uy tín cần giá thật.',keywords:['hy sinh','uy tín'],related:[11,31,35],questions:['Tiếc giá nào?','Thiệt khác hạ?','Tạo niềm tin thật?']},
+{id:35,g:'VI',n:'Liên hoàn kế',m:'Kế xâu chuỗi',han:'连环计',essence:'Tư duy chuỗi, không chiêu lẻ.',remember:'Chiến lược = chuỗi, không mẹo.',keywords:['chuỗi','quy trình'],related:[3,6,18],questions:['Mong ăn ngay?','Mắt xích yếu?','Sửa 1 → đổi chuỗi?']},
+{id:36,g:'VI',n:'Tẩu vi thượng sách',m:'Chạy là thượng sách',han:'走为上策',essence:'Rút lui đúng lúc bảo toàn lực.',remember:'Lui để còn lực tiến.',keywords:['rút lui','bảo toàn'],related:[11,4,32],questions:['Cố vì mục tiêu hay sĩ diện?','Giá ở lại?','Rút giữ gì?']}
+];
+
+// ===== 30 NGÀY DATA — HOÀN TOÀN RIÊNG BIỆT =====
+const ROADMAP=[
+// ===== GIAI ĐOẠN 1: NỀN TƯ DUY (1-7) =====
+{day:1,week:1,title:'Hiểu đúng 36 kế là gì',
+goal:'Gỡ bỏ hiểu lầm phổ biến nhất về 36 kế',
+focus:'36 kế là bộ khung đọc tình huống, không phải sách dạy lừa người',
+explain:'Hầu hết mọi người nghe "36 kế" là nghĩ đến mưu mẹo, lừa lọc. Sai. 36 kế là 36 cách nhìn tình huống — giúp bạn biết khi nào nên tiến, khi nào nên chờ, khi nào nên đổi hướng, khi nào nên lui. Nó KHÔNG phải nguyên văn Binh pháp Tôn Tử (đây là hiểu lầm #1). Tôn Tử viết về triết lý chiến tranh tổng quát. 36 kế là tập hợp các tình huống chiến lược cụ thể, tác giả không rõ, được lưu truyền dân gian.',
+example:'Bạn A làm PM. Dự án bị tắc. Thay vì họp thêm 10 buổi (dùng sức), A dừng lại hỏi: "Nút thắt thật sự nằm ở đâu?" — phát hiện ra vấn đề là quy trình duyệt, không phải năng lực đội. A sửa quy trình → dự án chạy. Đó là tư duy chiến lược: nhìn gốc, không đánh ngọn.',
+sampleAnswer:'Sai: "36 kế dạy lừa người." Đúng: "36 kế dạy đọc tình huống." Sai: "36 kế = Binh pháp Tôn Tử." Đúng: "Hai hệ thống khác nhau, thường bị nhầm." Cách hiểu đúng: mỗi kế là một góc nhìn chiến lược — khi nào nên ẩn, khi nào nên lộ, khi nào nên buông, khi nào nên siết.',
+mistake:'Học thuộc 36 cái tên mà không hiểu bản chất. Tưởng biết tên kế là biết dùng kế. Thực ra, tên chỉ là lớp bề mặt — cái cần học là trạng thái dùng, ranh giới đạo đức, và cách nhận diện trong đời thật.',
+task:'Viết 5 dòng trả lời câu hỏi: "Nếu ai đó nói 36 kế chỉ là mưu mẹo, bạn sẽ giải thích sao?" Không cần dài — cần rõ.',
+questions:['36 kế khác Binh pháp Tôn Tử ở điểm nào cụ thể?','Bạn từng hiểu sai điều gì về 36 kế trước khi học?','Nếu 36 kế không phải để lừa người, thì học để làm gì?','Trong công việc hiện tại, bạn đang "dùng sức" hay "dùng tư duy" nhiều hơn?'],
+keIds:[]},
+
+{day:2,week:1,title:'Hiểu "thế – lực – thời – điểm"',
+goal:'Nắm 4 trục nền tảng để đọc bất kỳ tình huống nào',
+focus:'Mọi tình huống đều có thể phân tích qua: thế (đang mạnh/yếu), lực (nguồn lực hiện có), thời (timing), điểm (nút then chốt)',
+explain:'Trước khi dùng bất kỳ kế nào, bạn phải trả lời được 4 câu: THẾ — mình đang mạnh, yếu, hay giằng co? LỰC — có bao nhiêu nguồn lực (tiền, người, thời gian, thông tin)? THỜI — đây có phải lúc hành động? ĐIỂM — nút then chốt nằm ở đâu? Giống như bác sĩ phải đo nhịp tim, huyết áp, thân nhiệt trước khi kê đơn — bạn phải "đo" 4 trục này trước khi quyết.',
+example:'Chị B muốn xin sếp tăng lương. THẾ: vừa hoàn thành dự án lớn → đang có thế. LỰC: có data về KPI tốt, có feedback từ khách hàng. THỜI: sếp vừa được khen bởi ban giám đốc → tâm trạng tốt. ĐIỂM: nút then chốt là sếp cần biết chị B đang có offer khác. → Chị B chọn đúng lúc, đúng dữ liệu, đúng điểm → tăng lương thành công.',
+sampleAnswer:'Sai lầm phổ biến là chỉ nhìn 1 trục. Ví dụ: "Mình giỏi mà" (chỉ nhìn lực) nhưng bỏ qua thế (sếp đang khó chịu), thời (công ty đang cắt giảm), điểm (yêu cầu chung chung). Phải nhìn đủ 4 trục. Khi 4 trục đều thuận → hành động mạnh. Khi 1-2 trục bất lợi → điều chỉnh hoặc chờ.',
+mistake:'Chỉ nhìn lực mà quên thế — kiểu "tôi giỏi nên tôi phải thắng." Hoặc chỉ nhìn thời mà quên điểm — kiểu "thị trường tốt nên mình cứ lao vào" nhưng không biết đánh vào đâu.',
+task:'Chọn 1 quyết định lớn bạn đang cân nhắc. Phân tích qua 4 trục: THẾ (mạnh/yếu/giằng co?), LỰC (có gì trong tay?), THỜI (đúng lúc chưa?), ĐIỂM (nút then chốt ở đâu?). Viết ra giấy.',
+questions:['Trong quyết định gần nhất bạn đã bỏ qua trục nào?','Có bao giờ bạn "đúng lực" nhưng "sai thời" không? Chuyện gì xảy ra?','Nút then chốt (điểm) trong công việc hiện tại của bạn là gì?'],
+keIds:[]},
+
+{day:3,week:1,title:'Vì sao mạnh chưa chắc thắng',
+goal:'Hiểu nguyên lý "không đánh trực diện nếu không cần"',
+focus:'6 kế nhóm I — Thắng Chiến Kế: khi đang có thế, dùng thế thông minh thay vì đánh ồ ạt',
+explain:'Nhóm I gồm 6 kế dùng khi bạn ĐANG CÓ THẾ. Bài học lớn nhất: có thế không có nghĩa cứ lao vào. Người giỏi dùng thế để tạo thêm thế — như đầu tư thông minh thay vì tiêu hoang. Man thiên quá hải: làm lớn dưới vỏ bình thường. Vi Ngụy cứu Triệu: không đánh chỗ mạnh, đánh chỗ buộc phải quay. Tá đao sát nhân: mượn lực hệ thống. Dĩ dật đãi lao: giữ sức chờ thời. Sấn hỏa đả kiếp: chớp cơ hội khi loạn. Thanh đông kích tây: chuyển hướng chú ý.',
+example:'Anh C là team lead, vừa hoàn thành 2 dự án lớn → đang có thế. Thay vì yêu cầu thăng chức ngay (đánh trực diện), anh âm thầm chuẩn hóa quy trình cho cả phòng (Man thiên quá hải), rồi demo kết quả trước ban giám đốc. Sếp tự đề xuất thăng chức cho anh. Kết quả tốt hơn gấp 10 lần nếu anh tự đòi.',
+sampleAnswer:'Có thế mà hấp tấp = lãng phí thế. Ví dụ: công ty đang có thị phần tốt → đổ tiền mở rộng ồ ạt → hết tiền → thua. Đúng ra: giữ lực, chuẩn hóa, rồi bung đúng lúc. 6 kế nhóm I đều xoay quanh nguyên tắc: "có thế thì dùng thế khôn, không dùng thế liều."',
+mistake:'Tưởng "có thế" = được làm gì cũng thắng. Nhiều công ty lớn thua vì kiêu ngạo khi đang mạnh — Nokia, Kodak, Blockbuster đều có thế nhưng dùng sai.',
+task:'Nghĩ về 1 lần bạn (hoặc tổ chức bạn) đang mạnh nhưng vẫn thua. Phân tích: lỗi ở đâu? Có đánh ồ ạt thay vì dùng thế thông minh? Viết 1 đoạn ngắn.',
+questions:['Bạn có xu hướng "lao vào" khi đang có lợi thế không?','Kế nào trong nhóm I gần với phong cách làm việc của bạn nhất?','Có ai xung quanh bạn đang lãng phí thế vì quá hấp tấp?'],
+keIds:[1,2,3,4,5,6]},
+
+{day:4,week:1,title:'Khi lối thẳng không phải lối tốt nhất',
+goal:'Hiểu giá trị của đường vòng, quan sát, và tạo tín hiệu',
+focus:'6 kế nhóm II — Địch Chiến Kế: khi giằng co, tạo lợi thế nhỏ bằng cách nhìn sâu hơn',
+explain:'Nhóm II dùng khi hai bên NGANG SỨC. Không ai mạnh hơn rõ ràng. Lúc này, thắng thuộc về người nhìn thấy điều người kia không thấy. Vô trung sinh hữu: tạo tín hiệu cho thứ chưa có. Ám độ Trần Thương: đi đường phụ. Cách ngạn quan hỏa: đứng ngoài quan sát. Tiếu lý tàng đao: đọc người qua hành vi. Lý đại đào cương: bỏ nhỏ giữ lớn. Thuận thủ khiên dương: nhặt cơ hội đúng lúc.',
+example:'Anh D muốn hợp tác với công ty X nhưng bị từ chối cuộc gặp trực tiếp (lối thẳng bị chặn). Thay vì cố gọi lại, anh viết 1 bài case study hay → gửi cho người phụ trách X → họ đọc → tự liên hệ lại. Ám độ Trần Thương: cửa chính bị khóa, đi cửa hông.',
+sampleAnswer:'Khi giằng co, người thắng là người kiên nhẫn tìm góc khác. Đừng cố đục tường khi có cửa sổ mở. Đường vòng không phải yếu — đường vòng là thông minh. Điều quan trọng: đường vòng phải hợp pháp và tử tế, không phải lươn lẹo.',
+mistake:'Cố ép thắng nhanh khi thế chưa đủ. Hoặc bỏ cuộc quá sớm chỉ vì lối thẳng không thông. Thực ra, hầu hết cơ hội lớn đều đến từ đường phụ.',
+task:'Viết ra 1 mục tiêu đang tắc. Bên dưới, viết 3 "đường vòng thông minh" có thể thử. Chọn 1 đường khả thi nhất.',
+questions:['Bạn có thiên kiến thích đường thẳng dù nó không hiệu quả?','Lần gần nhất bạn đạt được điều quan trọng bằng đường vòng là khi nào?','Đường vòng nào đang mở mà bạn chưa nhìn thấy?'],
+keIds:[7,8,9,10,11,12]},
+
+{day:5,week:1,title:'Đòn bẩy — cách nhân sức mà không tăng sức',
+goal:'Học cách nhìn mọi thứ xung quanh như nguồn lực có thể mượn',
+focus:'6 kế nhóm III — Công Chiến Kế: chủ động tấn công bằng cách test, cho trước, và xử gốc',
+explain:'Nhóm III dùng khi bạn CẦN CHỦ ĐỘNG. Nguyên lý chung: tấn công thông minh ≠ lao ồ ạt. Tấn công thông minh = test trước (Đả thảo kinh xà), cho giá trị trước để nhận lại nhiều hơn (Phao chuyên dẫn ngọc), xử lý đầu mối thay vì sa tiểu tiết (Cầm tặc cầm vương). Đòn bẩy nằm ở khắp nơi: SOP, data, thương hiệu, case study, quan hệ, công nghệ. Vấn đề là bạn có nhìn thấy không.',
+example:'Chị E muốn mở rộng kinh doanh nhưng ngân sách hạn hẹp. Thay vì thuê thêm 5 sales (tăng sức), chị tạo 1 bộ case study + video khách hàng review → đặt trên website → khách tự tìm đến. Đòn bẩy: nội dung thay thế sales. Chi phí: gần 0. Hiệu quả: gấp 3.',
+sampleAnswer:'Đòn bẩy là bất kỳ thứ gì giúp bạn đạt kết quả lớn hơn sức bỏ ra. Ví dụ: SOP là đòn bẩy (viết 1 lần, dùng mãi). Template proposal là đòn bẩy. Mối quan hệ với người giới thiệu khách là đòn bẩy. Hỏi: "Mình đang tự ôm gì mà hệ thống có thể làm thay?"',
+mistake:'Tấn công = ồ ạt, bằng sức. Sai. Tấn công thông minh = chính xác + chuẩn bị + đòn bẩy. Nhiều người kiệt sức không phải vì làm ít mà vì dùng sức thay vì dùng hệ thống.',
+task:'Liệt kê 5 việc bạn đang tự làm hằng ngày. Đánh dấu việc nào có thể dùng đòn bẩy (công cụ, người, quy trình) thay thế. Chọn 1 để chuyển đổi trong tuần này.',
+questions:['Đòn bẩy lớn nhất bạn đang bỏ quên là gì?','Nếu chỉ được giữ 1 đòn bẩy, bạn chọn cái nào?','Bạn đang "tăng sức" hay "tăng hệ thống"?'],
+keIds:[13,14,15,16,17,18]},
+
+{day:6,week:1,title:'Khi hỗn loạn — ai tỉnh sẽ dẫn',
+goal:'Hiểu cách ứng xử khi tình huống rối, mờ, hoặc đang yếu',
+focus:'6 kế nhóm IV (Hỗn Chiến) + 6 kế nhóm V (Tịnh Chiến) + 6 kế nhóm VI (Bại Chiến)',
+explain:'18 kế còn lại chia thành 3 nhóm: Hỗn chiến (khi rối), Tịnh chiến (khi giữ thế dài hạn), Bại chiến (khi đang yếu). Bài học xuyên suốt: KHÔNG CÓ TRẠNG THÁI NÀO LÀ VÔ VỌNG. Hỗn loạn → ai rõ ràng sẽ dẫn. Giằng co → ai thay được cấu trúc sẽ thắng. Yếu → ai giữ bình tĩnh + biết rút sẽ sống. Đặc biệt quan trọng: 6 kế nhóm VI (Bại Chiến) dạy bạn cách sống khi thua — đây là phần nhiều người bỏ qua.',
+example:'Công ty F gặp khủng hoảng khi nhà cung cấp lớn nhất dừng hợp tác bất ngờ. CEO không hoảng (Không thành kế), họp team 30 phút ra 3 phương án, cắt 2 dòng sản phẩm phụ (Lý đại đào cương), tập trung toàn lực vào 1 sản phẩm chính. 6 tháng sau, doanh thu tăng 40% vì tập trung hơn.',
+sampleAnswer:'Người học 36 kế ở tầng thấp hỏi: "Làm sao thắng người?" Người học ở tầng cao hỏi: "Mình đang thua vì điểm mù nào?" 18 kế này dạy bạn ứng xử trong mọi trạng thái — không chỉ lúc mạnh.',
+mistake:'Chỉ học kế tấn công mà bỏ qua phòng thủ. Kiểu: "Tôi chỉ cần biết thắng." Thực ra, người giỏi nhất là người ít thua nhất — vì họ biết đọc bẫy, biết rút, biết giữ lực.',
+task:'Chọn 1 tình huống rối bạn từng gặp. Phân loại: đó thuộc trạng thái nào? (Hỗn loạn / Giằng co / Yếu). Viết ra bạn đã xử lý thế nào, và nếu biết 36 kế, bạn sẽ làm khác gì.',
+questions:['Bạn phản ứng thế nào khi tình hình rối — co lại hay chủ động?','Khi nào bạn đã biết rút mà vẫn cố vì sĩ diện?','Kế nào trong 3 nhóm này khiến bạn "à, đúng quá" khi đọc?'],
+keIds:[19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36]},
+
+{day:7,week:1,title:'Vẽ bản đồ 36 kế của riêng bạn',
+goal:'Tổng hợp 6 nhóm thành 1 bản đồ tư duy cá nhân đơn giản',
+focus:'Không cần nhớ 36 tên — cần nhớ 6 trạng thái và 5 nguyên lý lõi',
+explain:'Thay vì nhớ 36 cái tên, hãy nhớ: 6 trạng thái (mạnh / giằng co / tấn công / rối / giữ thế / yếu) + 5 nguyên lý (đừng luôn đánh thẳng / chọn sân trước / giữ lực / đánh gốc / biết rút). Khi gặp BẤT KỲ tình huống nào, bạn hỏi: "Mình đang ở trạng thái nào?" → chọn nhóm kế phù hợp → chọn nguyên lý áp dụng. Đó là "hệ điều hành 36 kế" — không cần nhớ hết, chỉ cần biết tra.',
+example:'Anh G chuẩn bị đàm phán hợp đồng lớn. Tự hỏi: Thế? → Đang giằng co (nhóm II). Lực? → Có case study tốt nhưng giá cao hơn đối thủ. Thời? → Khách đang cần gấp. Điểm? → Người quyết là CFO, không phải người mình đang gặp. → Chọn: Phao chuyên dẫn ngọc (cho demo miễn phí) + Cầm tặc cầm vương (gặp thẳng CFO).',
+sampleAnswer:'Bản đồ 36 kế đơn giản nhất: Mạnh → dùng thế khôn. Giằng co → tìm góc mù. Tấn công → test + cho trước + xử gốc. Rối → rõ ràng là quyền lực. Giữ thế → thay cấu trúc. Yếu → giữ tĩnh + rút đúng lúc. Mỗi trạng thái có 6 kế. Bạn không cần biết hết — chỉ cần biết tra.',
+mistake:'Cố nhớ 36 tên như học vẹt. Không hiểu trạng thái nên dùng sai kế. Ví dụ: đang yếu mà dùng kế tấn công = tự sát chiến lược.',
+task:'Vẽ (hoặc viết) bản đồ 36 kế CỦA RIÊNG BẠN. 6 ô = 6 trạng thái. Mỗi ô ghi 1-2 kế bạn thấy hay nhất. Phía trên viết 5 nguyên lý lõi. Dán lên bàn làm việc.',
+questions:['Bạn đang ở trạng thái nào trong công việc hiện tại?','Nguyên lý nào trong 5 nguyên lý lõi bạn hay vi phạm nhất?','Nếu chỉ được nhớ 3 kế, bạn chọn kế nào? Tại sao?','Bản đồ tư duy này có gì khác với cách bạn từng nghĩ về chiến lược?'],
+keIds:[]},
+
+// ===== GIAI ĐOẠN 2: ỨNG DỤNG BẢN THÂN + CÔNG VIỆC (8-15) =====
+{day:8,week:2,title:'36 kế trong 1 ngày làm việc',
+goal:'Nhìn ra 36 kế đang diễn ra xung quanh mình mỗi ngày',
+focus:'Áp dụng khung 36 kế vào các tình huống công việc thường nhật',
+explain:'36 kế không phải thứ chỉ dùng trong "trận chiến lớn." Nó diễn ra mỗi ngày. Buổi sáng chọn việc quan trọng nhất = Cầm tặc cầm vương. Từ chối meeting không cần thiết = Tẩu vi thượng sách. Gửi bản nháp trước khi hoàn thiện = Đả thảo kinh xà. Để đồng nghiệp tự giải quyết xung đột = Cách ngạn quan hỏa.',
+example:'8h: Chị H check email, thấy sếp gửi 5 việc gấp. Thay vì lao vào hết, chị hỏi: "Việc nào là VUA?" (Cầm tặc cầm vương) → Chọn 1 việc ảnh hưởng nhất. 10h: Đồng nghiệp tranh cãi → chị không nhảy vào ngay (Cách ngạn quan hỏa). 14h: Cần thuyết phục sếp → gửi data trước (Phao chuyên dẫn ngọc). 16h: Dự án phụ đang hút sức → cắt (Lý đại đào cương).',
+sampleAnswer:'Hầu hết mọi người sống theo phản ứng: có việc thì làm. 36 kế dạy sống theo chiến lược: CHỌN việc nào, BỎ việc nào, DÙNG ai, ĐỢI khi nào. Mỗi quyết định nhỏ trong ngày đều là 1 lần "dùng kế" — dù bạn không gọi tên nó.',
+mistake:'Nghĩ 36 kế chỉ dùng cho "chuyện lớn" như đàm phán triệu đô. Thực ra, 80% giá trị của 36 kế nằm ở những quyết định nhỏ hằng ngày.',
+task:'Ghi lại 1 ngày làm việc vừa qua. Với mỗi quyết định lớn/nhỏ, thử gán 1 kế tương ứng. Bạn sẽ ngạc nhiên: mình đã "dùng kế" mà không biết.',
+questions:['Hôm nay bạn đã "Cầm tặc cầm vương" chưa — tức là chọn đúng việc quan trọng nhất?','Có lúc nào bạn nên "Cách ngạn quan hỏa" (đứng ngoài quan sát) thay vì nhảy vào?','Bạn đang "Dĩ dật đãi lao" (giữ lực) hay đang kiệt sức vì lao vào mọi thứ?'],
+keIds:[]},
+
+{day:9,week:2,title:'36 kế trong quản trị bản thân',
+goal:'Dùng 36 kế để thắng chính mình — trì hoãn, kiệt sức, mất tập trung',
+focus:'Đối thủ lớn nhất không ở ngoài, mà ở trong: thói quen xấu, cảm xúc, thiếu kỷ luật',
+explain:'Binh pháp Tôn Tử nói: "chiến thắng vĩ đại nhất là thắng chính mình." Trì hoãn mãi → đừng trách ý chí, hỏi nút cổ chai là gì (Cầm tặc cầm vương). Kiệt sức → không cố thêm, sửa lịch sống (Phủ để trừu tân — rút củi). Muốn thay đổi → bỏ thói quen cũ trước (Kim thiền thoát xác). Muốn kỷ luật → tạo cam kết không lùi (Thượng ốc trừu thê).',
+example:'Anh K trì hoãn việc viết báo cáo 2 tuần. Thay vì tự trách "lười", anh phân tích gốc: sợ bị chê → nút thắt là nỗi sợ, không phải lười. Anh áp dụng Đả thảo kinh xà: viết bản nháp xấu trước, gửi cho 1 người tin tưởng → nhận feedback → viết bản chính trong 2 giờ. Gốc rễ = sợ. Giải gốc = test nhỏ trước.',
+sampleAnswer:'Hầu hết vấn đề cá nhân không phải vì "yếu ý chí" mà vì sai cấu trúc. Ví dụ: muốn dậy sớm mà để điện thoại đầu giường = sai cấu trúc (Thâu lương hoán trụ — đổi cột). Để xa → phải đứng dậy tắt → thức. Đổi cấu trúc nhỏ → đổi hành vi lớn.',
+mistake:'Dùng ý chí để ép bản thân thay vì sửa cấu trúc. Kiểu: "Cố gắng hơn!" mà không hỏi: "Cái gì đang nuôi vấn đề này?" (Phủ để trừu tân).',
+task:'Chọn 1 thói quen xấu bạn muốn bỏ. Áp dụng khung: (1) Nút thắt gốc là gì? (2) Cấu trúc nào cần đổi? (3) Test nhỏ nào làm được ngay? Viết ra.',
+questions:['Thói quen xấu nhất của bạn đang được "nuôi" bởi cái gì?','Nếu đổi 1 cấu trúc nhỏ (giờ ngủ, bàn làm việc, app trên phone), hành vi nào sẽ tự thay đổi?','Bạn đang chiến đấu với triệu chứng hay nguyên nhân?'],
+keIds:[]},
+
+{day:10,week:2,title:'5 kế giúp quản lý bản thân tốt nhất',
+goal:'Chọn ra 5 kế cốt lõi cho phát triển cá nhân và luyện tập sâu',
+focus:'Dĩ dật đãi lao · Cầm tặc cầm vương · Phủ để trừu tân · Kim thiền thoát xác · Thượng ốc trừu thê',
+explain:'5 kế này tạo thành bộ "vũ khí tự quản": (1) Dĩ dật đãi lao — giữ lực, không đốt mình. (2) Cầm tặc cầm vương — tìm gốc, không vá lỗi. (3) Phủ để trừu tân — cắt nguồn nuôi vấn đề. (4) Kim thiền thoát xác — bỏ phiên bản cũ khi cần. (5) Thượng ốc trừu thê — tạo cam kết, đốt cầu phía sau.',
+example:'Chị L — marketer 28 tuổi, luôn kiệt sức. Áp dụng: (1) Giữ lực: từ chối 3 meeting không cần/tuần. (2) Tìm gốc: kiệt sức vì OCD hoàn hảo, không phải vì nhiều việc. (3) Rút củi: tắt Slack sau 6h tối. (4) Lột xác: chuyển từ "người nói yes mọi thứ" sang "người chọn đúng việc." (5) Cam kết: đăng ký khóa gym có phí để buộc đi.',
+sampleAnswer:'Mỗi kế giải 1 bài toán khác nhau: Dĩ dật = năng lượng. Cầm tặc = ưu tiên. Phủ để = loại bỏ. Kim thiền = đổi mới. Thượng ốc = kỷ luật. Kết hợp 5 kế này = hệ điều hành cá nhân mạnh.',
+mistake:'Áp dụng cả 5 cùng lúc. Nên bắt đầu từ 1 — kế nào gần nhất với vấn đề hiện tại. Làm 1 tuần rồi thêm kế thứ 2.',
+task:'Tự đánh giá: cho điểm 1-5 cho từng mảng: Năng lượng (Dĩ dật), Ưu tiên (Cầm tặc), Loại bỏ (Phủ để), Đổi mới (Kim thiền), Kỷ luật (Thượng ốc). Mảng nào thấp nhất → ưu tiên cải thiện.',
+questions:['Mảng nào bạn yếu nhất trong 5 mảng trên?','Nếu chỉ được cải thiện 1 mảng trong tháng này, bạn chọn mảng nào?','Cam kết nào bạn cần "đốt cầu" để buộc mình thực hiện?'],
+keIds:[4,18,19,21,28]},
+
+{day:11,week:2,title:'Biết lúc tiến, lúc lùi',
+goal:'Xây năng lực phán đoán: khi nào hành động, khi nào chờ, khi nào rút',
+focus:'Tiến – Chờ – Lui: 3 lựa chọn chiến lược mỗi ngày',
+explain:'Mỗi ngày bạn đều đối mặt với câu hỏi: tiến hay lùi? Nhưng ít ai hỏi: "Có nên CHỜ không?" 36 kế dạy: tiến khi có thế + thời + điểm. Chờ khi chưa đủ dữ liệu hoặc đối phương đang mạnh. Lui khi ở lại đắt hơn rút đi. Sai lầm lớn nhất không phải tiến sai hay lùi sai — mà là KHÔNG HỎI câu hỏi này trước khi hành động.',
+example:'Anh M nhận offer từ công ty mới, lương cao hơn 30%. Bản năng: nhận ngay! Nhưng anh dừng lại hỏi: THẾ — mình đang được đánh giá cao ở chỗ cũ? LỰC — công ty mới có ổn định? THỜI — đang giữa dự án lớn? ĐIỂM — lương cao nhưng quản lý nổi tiếng toxic? → Anh chọn CHỜ, đàm phán thêm, và cuối cùng ở lại với deal tốt hơn từ công ty cũ.',
+sampleAnswer:'Tiến = có đủ 3/4 trục thuận (thế, lực, thời, điểm). Chờ = thiếu dữ liệu hoặc timing chưa đúng. Lui = cái giá ở lại lớn hơn cái giá rút. Người giỏi không phải luôn tiến — họ giỏi vì biết khi nào KHÔNG tiến.',
+mistake:'Tiến vì sợ mất cơ hội (FOMO). Lùi vì sợ thất bại. Cả hai đều là quyết vì cảm xúc. Phải quyết vì phân tích.',
+task:'Nghĩ về 3 quyết định đang chờ bạn. Với mỗi quyết định, phân loại: TIẾN / CHỜ / LUI. Ghi rõ lý do.',
+questions:['Bạn có xu hướng tiến quá nhanh hay chờ quá lâu?','Quyết định gần nhất bạn "lùi" — đó là lùi chiến lược hay lùi vì sợ?','Có quyết định nào bạn đang chờ mà thực ra nên tiến ngay?'],
+keIds:[]},
+
+{day:12,week:2,title:'Chia nhỏ việc khó và đổi hướng tiếp cận',
+goal:'Biến bài toán lớn thành chuỗi bước nhỏ có thể thực hiện',
+focus:'Kết hợp Ám độ Trần Thương (đường vòng) + Đả thảo kinh xà (test nhỏ) + Liên hoàn kế (chuỗi)',
+explain:'Khi đối mặt với việc khó, não thường đóng băng vì thấy quá lớn. Giải pháp 36 kế: (1) Chia nhỏ thành bước test được (Đả thảo kinh xà). (2) Nếu đường thẳng tắc, đổi hướng (Ám độ Trần Thương). (3) Thiết kế chuỗi bước nối nhau (Liên hoàn kế). Không có chiêu thần kỳ nào giải 1 phát — chỉ có chuỗi bước nhỏ đúng.',
+example:'Chị N muốn chuyển ngành từ kế toán sang UX design. Quá lớn → đóng băng. Áp dụng: (1) Test nhỏ: học 1 khóa online miễn phí 2 tuần. (2) Đường vòng: không xin việc UX ngay, mà xin làm dự án nội bộ cải thiện UI cho phòng mình. (3) Chuỗi: khóa học → portfolio nhỏ → dự án nội bộ → mentor → apply. 8 tháng sau, chị có job UX đầu tiên.',
+sampleAnswer:'Bài toán lớn luôn có thể chia thành: Bước 1 (test khả thi) → Bước 2 (tạo bằng chứng nhỏ) → Bước 3 (mở rộng dựa trên bằng chứng). Đừng cố nhảy từ 0 lên 10. Đi 0→1→3→5→10.',
+mistake:'Lên kế hoạch hoàn hảo rồi không bắt đầu. Hoặc bắt đầu quá lớn rồi bỏ cuộc. Đúng ra: bắt đầu nhỏ + nhanh + sẵn sàng đổi hướng.',
+task:'Chọn 1 mục tiêu đang "đóng băng" vì quá lớn. Viết: Bước test (làm trong 48h) → Bước tạo bằng chứng (1-2 tuần) → Bước mở rộng (1 tháng).',
+questions:['Mục tiêu nào đang bị "đóng băng" vì quá lớn?','Bước test nhỏ nhất bạn có thể làm ngay hôm nay là gì?','Nếu đường thẳng bị tắc, đường vòng nào mở?'],
+keIds:[8,13,35]},
+
+{day:13,week:2,title:'Đánh gốc, không nghiện sửa ngọn',
+goal:'Luyện khả năng hỏi "5 lần vì sao" để tìm nguyên nhân gốc',
+focus:'Phủ để trừu tân + Cầm tặc cầm vương = bộ đôi "xử gốc"',
+explain:'Hầu hết mọi người giải quyết vấn đề bằng cách sửa biểu hiện. Nhân viên đi trễ → phạt. Dự án trễ → họp thêm. Khách phàn nàn → xin lỗi. Nhưng nếu gốc là SOP tệ, quản lý yếu, hay sản phẩm lỗi — thì sửa ngọn bao nhiêu cũng không đủ. Toyota nổi tiếng với kỹ thuật "5 Whys": hỏi 5 lần "vì sao" để tìm gốc.',
+example:'Doanh thu quý 3 giảm 20%. Sếp nói: "Đội sale làm việc chưa chăm." Nhưng hỏi 5 lần: Vì sao giảm? → Ít deal mới. Vì sao ít deal? → Lead chất lượng kém. Vì sao lead kém? → Chiến dịch marketing nhắm sai đối tượng. Vì sao nhắm sai? → Không có data khách hàng mới. Vì sao không có data? → Chưa ai phụ trách nghiên cứu thị trường. GỐC: thiếu vị trí, không phải đội sale lười.',
+sampleAnswer:'Gốc thật thường nằm cách biểu hiện 3-5 tầng. Nếu bạn hỏi "vì sao" chỉ 1 lần, bạn sẽ sửa sai chỗ. Nguyên tắc: nếu vấn đề lặp lại hơn 2 lần = bạn đang sửa ngọn.',
+mistake:'Sửa ngọn nhanh → cảm giác "xử lý rồi" → vấn đề quay lại → lại sửa ngọn → kiệt sức. Vòng lặp này là bẫy phổ biến nhất của người bận rộn.',
+task:'Chọn 1 vấn đề đang lặp lại trong công việc/cuộc sống. Hỏi 5 lần "Vì sao?" Viết từng câu trả lời. Câu trả lời cuối = gốc.',
+questions:['Vấn đề nào đang lặp lại mà bạn chỉ sửa ngọn?','Bạn có đang "nghiện" cảm giác bận rộn chữa cháy?','Nếu tìm đúng gốc, bao nhiêu vấn đề phụ sẽ tự biến mất?'],
+keIds:[19,18]},
+
+{day:14,week:2,title:'Dùng lực hệ thống thay vì chỉ lao bằng sức',
+goal:'Nhìn mọi người, quy trình, công cụ xung quanh như nguồn lực có thể huy động',
+focus:'Tá đao sát nhân + Phao chuyên dẫn ngọc + Thụ thượng khai hoa',
+explain:'Người ôm hết thường kiệt sức. Người giỏi biết: SOP = lực. Dashboard = lực. Case study = lực. Mối quan hệ = lực. Thương hiệu = lực. Template = lực. Bạn không cần mạnh hơn — cần huy động nguồn lực thông minh hơn.',
+example:'Anh P là freelancer thiết kế. Trước: tự liên hệ từng khách, tự thuyết trình, tự follow up. Kiệt sức, chỉ có 3 khách/tháng. Sau khi hiểu "đòn bẩy": tạo portfolio online (Thụ thượng khai hoa), viết 5 bài chia sẻ chuyên môn (Phao chuyên dẫn ngọc), nhờ 3 khách cũ viết review (Tá đao sát nhân). Kết quả: 8 khách/tháng, ít effort hơn.',
+sampleAnswer:'Hỏi: "Việc nào mình đang tự làm mà hệ thống có thể làm thay?" Nếu bạn đang gõ cùng 1 email 10 lần → template. Nếu đang giải thích cùng 1 thứ cho 10 người → tài liệu. Nếu đang bán bằng miệng → case study bán thay.',
+mistake:'"Tôi phải tự làm mới chắc." Sai. Bạn phải tự KIỂM SOÁT, không phải tự LÀM. Kiểm soát qua hệ thống, quy trình, tiêu chuẩn — không phải bằng cách ôm mọi thứ.',
+task:'Liệt kê 5 việc bạn lặp lại hằng tuần. Với mỗi việc, ghi: "Đòn bẩy nào có thể thay thế?" (template / SOP / công cụ / người / automation). Chọn 1 → chuyển đổi ngay tuần này.',
+questions:['Bạn đang ôm gì mà hệ thống có thể làm thay?','Nếu bạn nghỉ 2 tuần, hệ thống có chạy không? Nếu không → đâu là đòn bẩy còn thiếu?','Đòn bẩy lớn nhất bạn có nhưng chưa dùng đủ là gì?'],
+keIds:[3,17,29]},
+
+{day:15,week:2,title:'Chọn sân chơi đúng trước khi chọn cách chơi',
+goal:'Hiểu rằng nơi bạn chơi quyết định nhiều hơn cách bạn chơi',
+focus:'Điệu hổ ly sơn: nhiều người mạnh vì sân của họ, không vì bản thân họ luôn mạnh',
+explain:'Southwest Airlines không cạnh tranh dịch vụ cao cấp với United — họ kéo cuộc chơi sang giá rẻ + vui vẻ. Apple không cạnh tranh giá với Android — họ tạo hệ sinh thái. Bạn không cần thắng ở mọi sân — chỉ cần chọn đúng sân.',
+example:'Chị Q bán handmade trên Shopee. Giá luôn bị ép bởi hàng công nghiệp (sân sai). Chị chuyển sang bán trên Instagram + workshop trải nghiệm (đổi sân) → giá cao gấp 3, ít cạnh tranh hơn, khách trung thành hơn.',
+sampleAnswer:'Câu hỏi chiến lược quan trọng nhất không phải "Làm sao thắng?" mà là "Chơi ở đâu?" Nếu sân không phù hợp, mọi nỗ lực đều bị lãng phí. Đổi sân đôi khi hiệu quả hơn gấp 10 lần so với cố gắng hơn trên cùng sân cũ.',
+mistake:'Cứ đánh trên sân đối thủ mạnh nhất chỉ vì "đã quen." Hoặc đổi sân mà không kiểm tra sân mới có phù hợp.',
+task:'Nhìn lại công việc/kinh doanh hiện tại. Trả lời: (1) Sân hiện tại là gì? (2) Mình mạnh nhất ở sân nào? (3) Có sân nào khác phù hợp hơn? Viết so sánh.',
+questions:['Bạn đang chơi ở sân có lợi cho mình không?','Nếu đổi sân, điều gì thay đổi?','Có sân nào bạn đã bỏ qua chỉ vì "không quen"?'],
+keIds:[15]},
+
+// ===== GIAI ĐOẠN 3: GIAO TIẾP – ĐÀM PHÁN – ĐỌC NGƯỜI (16-23) =====
+{day:16,week:3,title:'Đọc người qua hành vi, không qua lời nói',
+goal:'Xây khung nhận diện: tin hành vi lặp lại hơn lời nói đẹp',
+focus:'Tiếu lý tàng đao: nguy hiểm không đi cùng vẻ mặt nguy hiểm',
+explain:'Con người có 2 loại tín hiệu: lời nói (dễ kiểm soát) và hành vi (khó giả). Người tử tế thật → lời nói và hành vi khớp. Người "cười giấu dao" → nói hay nhưng: hứa không giữ, trễ deadline, né văn bản, đổi điều kiện, thân phía trước nhưng chậm trả phía sau.',
+example:'Đối tác R rất dễ mến, mời ăn, tặng quà, nói "tin tưởng 100%." Nhưng: 3 lần hẹn đều đổi giờ phút cuối. Email quan trọng trả lời chậm 5 ngày. Khi hỏi chi tiết hợp đồng thì lảng sang chuyện khác. Hành vi nói: "người này không đáng tin" — dù miệng nói "tin tưởng."',
+sampleAnswer:'Khung đọc người: (1) Lời nói và hành vi có khớp không? (2) Hành vi lặp lại gì? (3) Họ cư xử với người yếu thế hơn mình thế nào? (4) Khi bị hỏi chi tiết, họ rõ ràng hay lảng tránh? Nếu 2/4 câu cho tín hiệu xấu → cảnh giác cao.',
+mistake:'Tin vì thiện cảm. "Người này dễ thương lắm chắc ổn." Sai. Dễ thương là cảm xúc. Đáng tin là dữ kiện. Phải tách hai thứ này.',
+task:'Nghĩ về 3 người bạn hay làm việc cùng. Với mỗi người, viết: (1) Họ nói gì? (2) Họ làm gì? (3) Hai thứ có khớp không? Rút ra 1 bài học.',
+questions:['Bạn có thiên kiến tin người dễ mến hơn người đáng tin?','Lần gần nhất bạn bị "cười giấu dao" là khi nào?','Hành vi nào là tín hiệu cảnh báo sớm nhất mà bạn hay bỏ qua?'],
+keIds:[10]},
+
+{day:17,week:3,title:'Nhận diện áp lực thời gian',
+goal:'Phát hiện khi ai đó dùng deadline giả, khan hiếm giả để ép bạn quyết sai',
+focus:'Thượng ốc trừu thê + Dục cầm cố túng: nới trước → siết sau, ép quyết khi chưa đủ thông tin',
+explain:'Một trong những tactic phổ biến nhất: tạo áp lực thời gian. "Deal này chỉ có hiệu lực đến thứ 6." "Nhiều bên đang tranh." "Sếp tôi chỉ cho đến cuối tuần." 80% trường hợp, deadline này là GIẢ — được thiết kế để bạn quyết nhanh, bỏ qua rà soát.',
+example:'Anh S đang mua nhà. Môi giới: "Có 3 người đang cọc, nếu anh không cọc hôm nay thì mất." Anh S hoảng, suýt chuyển tiền. Nhưng dừng lại hỏi: "Cho tôi xem tên 3 người đó?" Môi giới lúng túng. → Không có 3 người. Đó là khan hiếm giả.',
+sampleAnswer:'Nguyên tắc vàng: mọi áp lực thời gian đều phải bị nghi ngờ. Hỏi: "Nếu tôi cần thêm 24-48 giờ, có được không?" Nếu họ từ chối → rất có thể deadline là giả. Deal tốt thật sự không bay mất trong 24 giờ.',
+mistake:'Quyết vì sợ mất cơ hội (FOMO) thay vì vì phân tích. Câu hỏi đúng không phải "Có kịp không?" mà là "Có đủ thông tin không?"',
+task:'Viết sẵn 3 câu phản ứng khi bị ép thời gian: (1) "Em cần 24-48h rà lại." (2) "Mình có thể gia hạn deadline này không?" (3) "Nếu deal tốt thật, ngày mai nó vẫn tốt." Tập nói thành thạo.',
+questions:['Bạn đã bao giờ quyết sai vì bị ép thời gian chưa?','Làm sao phân biệt deadline thật và deadline giả?','Khi bị ép "phải quyết ngay", cảm xúc nào chi phối bạn nhất?','Nếu bạn luôn có quyền nói "cho tôi thêm 1 ngày", bạn sẽ quyết khác không?'],
+keIds:[28,16]},
+
+{day:18,week:3,title:'Nhận diện khi bị che giấu hoặc chia nhỏ thông tin',
+goal:'Phát hiện tactic "mỗi người biết 1 phần" để không ai nhìn thấy bức tranh toàn diện',
+focus:'Phản gián kế + Thanh đông kích tây: kéo bạn vào chuyện phụ, giấu chuyện chính',
+explain:'Một tactic tinh vi: đối tác nói với sale 1 kiểu, kỹ thuật 1 kiểu, sếp 1 kiểu. Mỗi người nghe 1 phiên bản → nội bộ bạn lệch thông tin → tự phá giá lẫn nhau. Hoặc: cuộc nói chuyện rất sôi động về cảm xúc, quan hệ, thiện chí — nhưng 5 điểm chính (giá, phạm vi, deadline, nghiệm thu, trách nhiệm) bị lướt qua.',
+example:'Công ty T đang ký hợp đồng với vendor. Sale nghe: "giá linh hoạt." Kỹ thuật nghe: "scope cơ bản." Sếp nghe: "cam kết 100% on-time." Khi ký xong, vendor nói: "giá cố định, scope rộng hơn, và deadline không cam kết." 3 người nghe 3 kiểu → không ai phát hiện → ký sai.',
+sampleAnswer:'Cách phòng: (1) Một đầu mối tổng hợp duy nhất cho mọi cuộc trao đổi. (2) Biên bản họp chung, không deal miệng. (3) Sau mỗi meeting, gửi email xác nhận nội dung cho tất cả bên. (4) Nếu phát hiện thông tin lệch: "Mình chốt lại phiên bản cuối cùng trước toàn nhóm nhé."',
+mistake:'Tin rằng "ai cũng nghe giống nhau." Sai. Khi đối tác nói riêng với từng người = tín hiệu cảnh báo. Nếu họ muốn minh bạch, họ sẽ nói trước toàn bộ nhóm.',
+task:'Nhớ lại 1 lần nội bộ bạn hiểu lệch thông tin. Viết: (1) Ai hiểu gì? (2) Lệch ở đâu? (3) Hậu quả? (4) Nếu có biên bản chung, điều gì sẽ khác?',
+questions:['Trong tổ chức bạn, ai đang là "đầu mối tổng hợp" thông tin?','Có bao giờ bạn phát hiện đối tác nói mỗi người 1 kiểu?','Bạn có thói quen gửi email xác nhận sau meeting không?'],
+keIds:[33,6]},
+
+{day:19,week:3,title:'Nhận diện tactic đẩy bạn vào thế yếu',
+goal:'Phát hiện 5 cách đối phương khiến bạn mất quyền chủ động',
+focus:'Phản khách vi chủ + Thượng ốc trừu thê + Dục cầm cố túng',
+explain:'5 cách bị đẩy vào thế yếu: (1) Mất thông tin: họ nắm data, bạn không. (2) Mất đường lui: đã đầu tư quá nhiều nên khó rút. (3) Mất người: họ chiêu mộ người then chốt của bạn. (4) Mất nhịp: bạn phải phản ứng theo timeline của họ. (5) Mất lõi: họ dần nắm quy trình, khách, file gốc — bạn phụ thuộc.',
+example:'Startup U thuê agency làm marketing. Ban đầu agency rất dễ chịu, chi phí thấp. 6 tháng sau: agency nắm hết tài khoản ads, data khách, content gốc. Khi U muốn tự làm, agency nói: "Tài khoản này của bên em." U bị lock-in. Đó là Phản khách vi chủ + Dục cầm cố túng.',
+sampleAnswer:'Trước khi hợp tác, luôn hỏi: (1) Data thuộc về ai? (2) Tài khoản thuộc về ai? (3) Nếu dừng hợp tác, bàn giao thế nào? (4) Có cơ chế thay thế không? Nếu câu trả lời đều mờ → bạn đang bước vào bẫy lock-in.',
+mistake:'Chỉ nhìn giá đầu vào mà không nhìn chi phí rút lui. "Vào dễ, ra khó" là dấu hiệu đỏ lớn nhất.',
+task:'Rà soát 3 mối quan hệ hợp tác hiện tại. Với mỗi mối, hỏi: (1) Ai nắm data? (2) Ai nắm quy trình? (3) Nếu dừng, mất gì? Nếu 2/3 câu trả lời là "bên kia" → bạn đang ở thế yếu.',
+questions:['Bạn đang phụ thuộc vào ai/gì mà không có backup?','Nếu vendor/đối tác chính dừng hợp tác ngay bây giờ, bạn có đường thay thế?','Có hợp đồng nào bạn "vào dễ ra khó"?'],
+keIds:[30,28,16]},
+
+{day:20,week:3,title:'36 kế trong đàm phán giá',
+goal:'Áp dụng 36 kế vào tình huống đàm phán giá cụ thể',
+focus:'Kết hợp: Phao chuyên dẫn ngọc + Điệu hổ ly sơn + Dĩ dật đãi lao + Lý đại đào cương',
+explain:'Đàm phán giá không chỉ là kỳ kèo. Nó là chiến lược: Cho trước giá trị (Phao chuyên dẫn ngọc) → tạo niềm tin → giá ít bị ép. Đổi cuộc chơi từ "so giá" sang "so giá trị" (Điệu hổ ly sơn). Không phản ứng vội khi bị ép giá (Dĩ dật đãi lao). Sẵn sàng nhượng điểm phụ để giữ điểm chính (Lý đại đào cương).',
+example:'Chị V — nhà thiết kế nội thất. Khách hàng: "Giá này cao quá, bên kia rẻ hơn 20%." Thay vì giảm giá ngay, chị: (1) Gửi case study với kết quả trước/sau rõ ràng (Phao chuyên dẫn ngọc). (2) "Bên kia rẻ hơn vì scope khác nhau. Mình so sánh chi tiết nhé?" (Điệu hổ ly sơn — đổi sân từ giá sang giá trị). (3) Nhượng phí tư vấn ban đầu nhưng giữ nguyên phí thi công (Lý đại đào cương). Kết quả: khách ký.',
+sampleAnswer:'Khi bị ép giá, đừng phản ứng bằng giảm giá. Phản ứng bằng: (1) Cho thấy giá trị (case study, data). (2) Đổi tiêu chí so sánh (không so giá — so kết quả). (3) Nhượng cái nhỏ, giữ cái lớn. (4) Giữ bình tĩnh — người phản ứng chậm thường thắng.',
+mistake:'Giảm giá ngay khi bị ép → mất uy tín + tạo tiền lệ "ép là được." Hoặc cứng nhắc 100% → mất deal.',
+task:'Viết sẵn 1 "kịch bản đàm phán giá" cho sản phẩm/dịch vụ bạn đang bán. Gồm: (1) Câu phản ứng khi bị ép giá. (2) Case study/data để chứng minh giá trị. (3) Điểm có thể nhượng. (4) Điểm không nhượng.',
+questions:['Bạn có xu hướng giảm giá quá nhanh khi bị ép?','Case study mạnh nhất bạn có để chứng minh giá trị là gì?','Nhượng cái gì nhỏ để giữ cái gì lớn trong deal hiện tại?'],
+keIds:[17,15,4,11]},
+
+{day:21,week:3,title:'36 kế trong giao tiếp với khách hàng',
+goal:'Dùng 36 kế để xây niềm tin, xử phàn nàn, và giữ khách dài hạn',
+focus:'Phao chuyên dẫn ngọc + Khổ nhục kế + Thuận thủ khiên dương',
+explain:'Với khách hàng, 3 kế hữu ích nhất: (1) Cho trước giá trị thật (Phao chuyên dẫn ngọc) — không bán → giúp trước. (2) Khi có lỗi, nhận trách nhiệm ngay (Khổ nhục kế) — thiệt ngắn, giữ uy tín dài. (3) Nhặt mọi cơ hội nhỏ: feedback tốt → case study, giới thiệu → follow ngay (Thuận thủ khiên dương).',
+example:'Khách W phàn nàn sản phẩm lỗi. Thay vì chống chế, công ty: (1) Nhận lỗi ngay + hoàn tiền + gửi sản phẩm mới (Khổ nhục kế). (2) Gửi thêm voucher 20% cho lần sau (Phao chuyên dẫn ngọc). (3) Khách cảm động, viết review 5 sao → biến khủng hoảng thành marketing (Thuận thủ khiên dương).',
+sampleAnswer:'Với khách hàng, người thắng lâu dài không phải người bán giỏi nhất — mà là người xây NIỀM TIN giỏi nhất. Niềm tin đến từ: cho trước, nhận lỗi nhanh, và tận dụng mọi cơ hội nhỏ để tạo trải nghiệm tốt.',
+mistake:'Chống chế khi có lỗi. Bán mà không cho. Bỏ qua cơ hội nhỏ (feedback tốt, lời giới thiệu) vì "chưa đủ lớn."',
+task:'Viết 1 email phản hồi khách phàn nàn theo khung: (1) Nhận lỗi rõ ràng. (2) Giải pháp cụ thể. (3) Bonus thêm 1 giá trị bất ngờ. Tập viết cho thuần.',
+questions:['Lần gần nhất bạn nhận lỗi trước khách — kết quả thế nào?','Bạn có đang "cho trước" giá trị hay chỉ "bán trước"?','Cơ hội nhỏ nào từ khách bạn đang bỏ qua (review, giới thiệu, feedback)?'],
+keIds:[17,34,12]},
+
+{day:22,week:3,title:'36 kế trong quan hệ đồng nghiệp',
+goal:'Dùng 36 kế để xử xung đột nội bộ, góp ý khéo, và tạo ảnh hưởng',
+focus:'Chỉ tang mạ hòe (góp ý gián tiếp) + Cách ngạn quan hỏa (quan sát trước) + Phản khách vi chủ (chủ động dẫn dắt)',
+explain:'Với đồng nghiệp, 3 tình huống thường gặp: (1) Cần góp ý nhưng sợ đụng chạm → Chỉ tang mạ hòe: góp ý qua nguyên tắc chung, không bêu tên. (2) Có xung đột nhưng chưa rõ ai đúng sai → Cách ngạn quan hỏa: quan sát đủ dữ liệu trước khi can thiệp. (3) Muốn tạo ảnh hưởng nhưng chưa có chức danh → Phản khách vi chủ: ai tóm được vấn đề và đề xuất bước tiếp = người dẫn dắt.',
+example:'Hai phòng ban đang cãi nhau về trách nhiệm dự án. Chị X — PM — không nhảy vào ngay (Cách ngạn quan hỏa). Chị quan sát 2 ngày, thu thập data. Rồi trong meeting, chị không đổ lỗi ai, mà đưa ra checklist phân công rõ ràng (Chỉ tang mạ hòe — sửa quy trình, không sửa người). Kết quả: xung đột hết vì quy trình rõ.',
+sampleAnswer:'Trong nội bộ, sức mạnh không đến từ chức danh — đến từ ai tạo ra sự rõ ràng. Góp ý đúng cách = sửa được việc mà không mất quan hệ. Quan sát trước khi nhảy vào = tránh bị lôi vào phe. Chủ động đề xuất = được nhìn nhận.',
+mistake:'Nhảy vào xung đột nội bộ quá sớm → bị kéo vào phe. Góp ý thẳng mặt trước đám đông → tạo thù. Im lặng mãi → bị coi là không có ý kiến.',
+task:'Viết lại 1 lời góp ý bạn đã nói thẳng (hoặc muốn nói) → chuyển thành phiên bản "Chỉ tang mạ hòe" — góp ý gián tiếp nhưng vẫn rõ ý. So sánh 2 phiên bản.',
+questions:['Bạn đang là người giải quyết hay người gây thêm xung đột nội bộ?','Có xung đột nào bạn nên đứng ngoài quan sát thêm?','Làm sao tạo ảnh hưởng mà không cần chức danh?'],
+keIds:[26,9,30]},
+
+{day:23,week:3,title:'Tách cảm xúc khỏi chiến lược',
+goal:'Luyện khả năng quyết định bằng tiêu chí, không bằng cảm xúc',
+focus:'Mỹ nhân kế: cảm xúc (thích, sợ, ham, nể) là kẻ thù số 1 của phán đoán tốt',
+explain:'Khi cảm xúc lên cao, phần lý trí bị tắt. Bạn thích ai → bỏ qua lỗi của họ. Bạn sợ mất cơ hội → ký nhanh. Bạn nể ai → không dám hỏi kỹ. Bạn ham thành tích → ôm quá nhiều. 36 kế dạy: luôn quay về CHECKLIST trước khi quyết — không phải vì không có cảm xúc, mà vì cảm xúc không nên lái tay lái.',
+example:'Anh Y rất thích deal với công ty Z — CEO dễ mến, tầm nhìn hay, sản phẩm đẹp. Nhưng khi bình tĩnh rà checklist: (1) Dòng tiền Z âm 3 quý liền. (2) Hợp đồng có điều khoản độc quyền 3 năm. (3) Không có cơ chế thoát. Cảm xúc nói: "Ký!" Tiêu chí nói: "Dừng." Anh Y dừng. 6 tháng sau Z phá sản.',
+sampleAnswer:'Bài test quan trọng nhất: "Nếu đổi người bên kia mà điều khoản giữ nguyên, mình có còn muốn ký không?" Nếu câu trả lời thay đổi → bạn đang quyết vì người, không vì tiêu chí. Nguy hiểm.',
+mistake:'Quyết vì "thích người." Quyết vì "sợ mất." Quyết vì "nể." Cả 3 đều là cảm xúc, không phải chiến lược.',
+task:'Viết ra 3 "trigger cảm xúc" dễ khiến bạn quyết sai nhất (thích ai đó / sợ mất / ham thành tích / nể ai...). Với mỗi trigger, viết 1 câu hỏi "kiểm tra" để tự kéo mình về lý trí.',
+questions:['Trigger cảm xúc nguy hiểm nhất của bạn là gì?','Lần gần nhất bạn quyết vì "thích" thay vì vì "tiêu chí" — kết quả thế nào?','Nếu có checklist cố định trước mọi quyết định lớn, bạn sẽ bỏ được bao nhiêu sai lầm?'],
+keIds:[31]},
+
+// ===== GIAI ĐOẠN 4: PHÒNG VỆ – TÍCH HỢP (24-30) =====
+{day:24,week:4,title:'Cách tự phòng vệ trước đối tác xấu',
+goal:'Xây bộ radar nhận diện 5 kiểu đối tác nguy hiểm',
+focus:'5 điểm mù: thiện cảm giả, thông tin méo, áp lực thời gian, mất BATNA, đội bị chia',
+explain:'Đối tác xấu thường không lộ ngay. Họ đi theo 5 đường: (1) Quá ngọt nhưng quá mờ. (2) Quá gấp nhưng thiếu thông tin. (3) Quá hay nhưng thiếu bằng chứng. (4) Quá nhiều người nói nhưng không rõ ai quyết. (5) Càng gần ký càng bất an. Nếu thấy 3/5 → dừng lại.',
+example:'Công ty AA nhận được đề xuất hợp tác "quá đẹp." Đối tác: dễ mến, nhiệt tình, hứa lớn. Nhưng: (1) Né ghi rõ KPI. (2) "Phải ký tuần này." (3) Case study toàn logo lớn nhưng không có số liệu. (4) Mỗi lần hỏi lại gặp người khác. (5) Điều khoản phạt nặng bên AA nhưng không phạt bên kia. → AA dừng. 3 tháng sau nghe tin đối tác lừa 2 công ty khác.',
+sampleAnswer:'Nguyên tắc đơn giản: "Nếu thấy 3/5 dấu hiệu đỏ → chưa ký. Nếu thấy 5/5 → chạy." Không phải để nghi ngờ tất cả mọi người — mà để lọc sớm 10% đối tác không sạch.',
+mistake:'Tin vì thiện cảm. Ký vì sợ mất cơ hội. Bỏ qua dấu hiệu vì "chắc không sao đâu."',
+task:'Viết ra checklist 5 câu hỏi bạn sẽ TỰ HỎI trước mỗi deal quan trọng. Dán lên nơi làm việc.',
+questions:['Đối tác hiện tại của bạn có dấu hiệu nào trong 5 điểm mù?','Bạn có BATNA (phương án thay thế) nếu deal này không thành?','Lần gần nhất bạn "linh cảm" có gì sai nhưng vẫn tiến — kết quả thế nào?'],
+keIds:[]},
+
+{day:25,week:4,title:'Khi nào nên dừng — không ký — không tiến',
+goal:'Xây khung ra quyết định "DỪNG" thay vì luôn tiến',
+focus:'Tẩu vi thượng sách + 7 dấu hiệu dừng ký ngay',
+explain:'Xã hội dạy: tiến là tốt, lùi là thua. Sai. Biết dừng đúng lúc là trí tuệ. 7 dấu hiệu dừng: (1) Bị ép giờ. (2) Né văn bản. (3) Điều khoản mờ. (4) Nói nhiều hơn chứng minh. (5) Nhiều deal ngoài luồng. (6) Đổi điều kiện phút cuối. (7) Càng gần ký càng bất an. Nếu thấy 3+ → DỪNG, không phải "cố thêm."',
+example:'Anh BB đang ký hợp đồng nhà thầu. Mọi thứ tốt — nhưng phút cuối nhà thầu thêm 1 phụ lục: "Phát sinh do bên A chịu 100%." Anh BB suýt ký vì đã mệt. Nhưng nhớ: "Đổi điều kiện phút cuối = dấu hiệu đỏ." → Yêu cầu xóa phụ lục. Nhà thầu đồng ý → chứng tỏ đó là "test xem bên A có đọc không."',
+sampleAnswer:'Câu hỏi kiểm tra cuối cùng: "Nếu KHÔNG ký deal này, mình có sống khỏe không?" Nếu có → bạn có quyền nói không. Quyền nói không = sức mạnh lớn nhất trong đàm phán.',
+mistake:'Ký vì sĩ diện ("đã nói rồi"). Ký vì mệt ("thôi xong đi"). Ký vì sợ ("mất cơ hội thì sao"). Cả 3 đều không phải lý do tốt.',
+task:'Nhớ lại 1 deal/quyết định bạn ĐÁNG RA nên dừng nhưng vẫn tiến. Viết: (1) Dấu hiệu đỏ nào bạn bỏ qua? (2) Hậu quả? (3) Nếu làm lại, bạn sẽ dừng ở điểm nào?',
+questions:['Bạn có quyền nói "không" với deal hiện tại không?','Dấu hiệu nào bạn hay bỏ qua nhất trong 7 dấu hiệu đỏ?','Ký vì phân tích hay ký vì cảm xúc?'],
+keIds:[36]},
+
+{day:26,week:4,title:'Xây checklist đọc tình huống trước khi hành động',
+goal:'Tạo bộ công cụ cá nhân: 5 câu hỏi hỏi mỗi khi gặp tình huống quan trọng',
+focus:'Kết hợp: thế – lực – thời – điểm + 5 nguyên lý + 6 trạng thái',
+explain:'Người chiến lược không khôn hơn người khác — họ có KHUNG tốt hơn. Trước mỗi quyết định quan trọng, chỉ cần 5 câu: (1) Mình đang ở trạng thái nào? (2) Điểm gốc là gì? (3) Sân chơi nào có lợi? (4) Đòn bẩy nào đang bị bỏ? (5) Tiến, chờ, hay lui?',
+example:'Chị CC được mời startup với bạn thân. Trước khi quyết: (1) Trạng thái? → Đang có job ổn, bạn thân chưa có kinh nghiệm (giằng co). (2) Gốc? → Ý tưởng tốt nhưng chưa có khách thật. (3) Sân? → Có thể thử part-time trước. (4) Đòn bẩy? → Network khách hàng của chị. (5) Tiến/chờ/lui? → CHỜ — thử pilot 3 tháng trước khi fulltime. Quyết định: thử nhỏ trước.',
+sampleAnswer:'Checklist không thay thế trực giác — nó bổ sung cho trực giác. Khi cảm xúc nói "tiến!", checklist giúp kiểm tra: "có đủ dữ liệu chưa?" Khi lo lắng nói "lùi!", checklist giúp hỏi: "có đủ lý do không?"',
+mistake:'Không có khung → quyết theo bản năng → may rủi 50-50. Có khung → quyết có cơ sở → tỷ lệ đúng tăng lên 70-80%.',
+task:'Viết BỘ CHECKLIST CÁ NHÂN 5 câu hỏi mà bạn sẽ hỏi trước mỗi quyết định lớn. Tùy chỉnh 5 câu gợi ý cho phù hợp phong cách riêng. In ra dán lên bàn.',
+questions:['5 câu hỏi nào giúp bạn quyết tốt nhất?','Quyết định gần nhất bạn làm mà KHÔNG có checklist — kết quả sao?','Checklist có giúp bạn bớt lo lắng khi quyết định không?'],
+keIds:[]},
+
+{day:27,week:4,title:'Viết bộ nguyên tắc chiến lược của riêng bạn',
+goal:'Chuyển hóa 36 kế thành 5-7 nguyên tắc sống CÁ NHÂN',
+focus:'Không copy nguyên tắc người khác — viết nguyên tắc từ trải nghiệm riêng',
+explain:'Nguyên tắc tốt nhất không phải nguyên tắc hay nhất — mà là nguyên tắc bạn THẬT SỰ TIN và THẬT SỰ LÀM THEO. Nó phải đến từ trải nghiệm, không phải lý thuyết. Ví dụ: thay vì "Đừng tin cảm xúc" (quá chung), viết: "Khi tôi quá thích 1 deal, tôi sẽ đợi 24h trước khi quyết" (cụ thể, hành động được).',
+example:'Sau 27 ngày học, anh DD viết 5 nguyên tắc riêng: (1) "Mệt = đang sửa ngọn. Dừng lại tìm gốc." (2) "Nếu không giải thích được bằng 1 câu, mình chưa hiểu đủ." (3) "Deal tốt thật không bay trong 24 giờ." (4) "Đọc hành vi 3 lần trước khi tin lời nói 1 lần." (5) "Mỗi tuần phải cắt 1 thứ đang hao sức vô ích."',
+sampleAnswer:'Cách viết nguyên tắc tốt: (1) Bắt đầu từ sai lầm lặp lại — nguyên tắc nào ngăn bạn lặp? (2) Viết dạng hành động, không dạng triết lý. (3) Ngắn → dễ nhớ. (4) Test bằng cách hỏi: "Trong 3 tháng tới, nguyên tắc này có hướng dẫn được quyết định thật không?"',
+mistake:'Viết nguyên tắc chung chung kiểu "Hãy tốt với mọi người." Không sai nhưng không giúp quyết định. Cần cụ thể hơn.',
+task:'Viết 5 nguyên tắc chiến lược CỦA RIÊNG BẠN. Mỗi nguyên tắc: 1 câu, dạng hành động, đến từ 1 bài học thật bạn đã trải qua. Không copy từ sách.',
+questions:['Sai lầm nào bạn lặp lại nhiều nhất → cần nguyên tắc gì để ngăn?','Nếu chỉ được nhớ 1 nguyên tắc từ 36 kế, bạn chọn gì?','Nguyên tắc bạn vừa viết có đủ cụ thể để hướng dẫn quyết định thật không?'],
+keIds:[]},
+
+{day:28,week:4,title:'10 bài học xương sống sau 28 ngày',
+goal:'Tổng hợp lại những gì đã học thành 10 insight cốt lõi',
+focus:'Nhìn lại hành trình: từ hiểu khái niệm → áp dụng → phòng vệ → tạo hệ tư duy',
+explain:'Sau 28 ngày, bạn không cần nhớ hết — cần nhớ 10 thứ xương sống: (1) 36 kế là khung đọc tình huống. (2) Thế-lực-thời-điểm là 4 trục phân tích. (3) Không phải lúc nào mạnh cũng thắng. (4) Đường vòng đôi khi là đường ngắn nhất. (5) Đòn bẩy > dùng sức. (6) Hành vi > lời nói. (7) Cảm xúc ≠ chiến lược. (8) Gốc > ngọn. (9) Biết dừng = trí tuệ. (10) Nguyên tắc cá nhân = vũ khí mạnh nhất.',
+example:'Bạn không cần nhớ "Ám độ Trần Thương" hay "Phủ để trừu tân." Bạn cần nhớ: "Khi đường thẳng tắc, tìm đường vòng" và "Khi vấn đề lặp lại, rút củi thay dập lửa." Tên kế là nhãn — nguyên lý mới là vũ khí.',
+sampleAnswer:'10 insight này không phải chân lý vĩnh cửu — chúng là điểm bắt đầu. Bạn sẽ điều chỉnh theo trải nghiệm riêng. Có insight bạn sẽ dùng mỗi ngày, có cái dùng mỗi tháng, có cái cả năm mới dùng 1 lần nhưng cứu bạn.',
+mistake:'Cố nhớ hết 36 tên kế. Không cần. Nhớ nguyên lý, không nhớ nhãn.',
+task:'Viết ra 10 bài học xương sống CỦA RIÊNG BẠN sau 28 ngày. Không nhất thiết giống 10 bài trên — viết từ trải nghiệm thật của mình.',
+questions:['Insight nào thay đổi cách bạn nghĩ nhiều nhất?','Insight nào bạn đã áp dụng được và thấy hiệu quả?','Insight nào bạn biết là đúng nhưng chưa làm được?','Nếu phải dạy 1 người khác, bạn dạy insight nào đầu tiên?'],
+keIds:[]},
+
+{day:29,week:4,title:'Diễn tập 3 tình huống tổng hợp',
+goal:'Áp dụng toàn bộ kiến thức vào 3 case thực chiến',
+focus:'Không học thêm — chỉ DÙNG những gì đã học',
+explain:'Hôm nay không có bài mới. Bạn sẽ phân tích 3 tình huống thực tế, sử dụng mọi công cụ đã học: 4 trục, 6 trạng thái, 5 nguyên lý, checklist cá nhân. Mục tiêu: chứng minh bạn có thể tự phân tích mà không cần xem lại bài.',
+example:'CASE 1: Bạn bị đồng nghiệp tranh công. CASE 2: Khách hàng lớn muốn giảm giá 40% hoặc bỏ. CASE 3: Bạn được mời làm co-founder nhưng không rõ vai trò. — Với mỗi case, phân tích: trạng thái gì? Gốc ở đâu? Tiến/chờ/lui? Kế nào áp dụng?',
+sampleAnswer:'CASE 1: Trạng thái giằng co. Gốc: vai trò mơ hồ. Kế: Phản khách vi chủ (chủ động chốt role) + Thụ thượng khai hoa (trình bày thành tích rõ). CASE 2: Trạng thái bị ép. Kế: Điệu hổ ly sơn (đổi tiêu chí so sánh từ giá sang giá trị) + Dĩ dật đãi lao (không nhượng ngay) + Lý đại đào cương (có thể giảm scope, giữ giá). CASE 3: Trạng thái mờ. Kế: Đả thảo kinh xà (làm pilot 3 tháng trước) + checklist 5 câu hỏi trước khi quyết.',
+mistake:'Phân tích trên giấy nhưng không chọn HÀNH ĐỘNG cụ thể. Chiến lược không giá trị nếu không dẫn đến 1 bước đi rõ ràng.',
+task:'Với mỗi case trên (hoặc 3 tình huống thật của bạn): viết phân tích 5 dòng + hành động cụ thể 1 dòng. Tổng = 18 dòng = 1 bài diễn tập hoàn chỉnh.',
+questions:['Bạn phân tích nhanh hơn so với 28 ngày trước không?','Phần nào bạn vẫn "kẹt" khi phân tích?','Nếu phải tự xử 1 trong 3 case ngay bây giờ, bạn tự tin không?'],
+keIds:[]},
+
+{day:30,week:4,title:'Hệ điều hành 36 kế cho đời sống hiện đại',
+goal:'Chốt lại toàn bộ hành trình thành 1 "hệ điều hành" cá nhân chạy mỗi ngày',
+focus:'Không phải "tốt nghiệp" — mà là "bắt đầu sống khác"',
+explain:'36 kế ở tầng thấp là cách xử tình huống. Ở tầng trung là cách điều hành cuộc chơi. Ở tầng cao là cách không để bản thân bị mù tình huống, mù động cơ, và mù chính mình. Hệ điều hành hằng ngày: MỖI SÁNG hỏi 5 câu (thế trận? gốc? sân? đòn bẩy? tiến/chờ/lui?). MỖI TỐI hỏi 5 câu (cảm xúc nào dắt? đọc lời hay hành vi? bỏ lỡ gì? ôm gì không đáng? ngày mai dùng kế nào?). MỖI TUẦN: xử 1 nút thắt + cắt 1 nguồn hao + mở 1 cơ hội.',
+example:'30 ngày trước, bạn nghe "36 kế" nghĩ đến mưu mẹo. Bây giờ, bạn có: 1 bản đồ 6 trạng thái. 1 bộ 5 nguyên lý. 1 checklist quyết định. 1 bộ nguyên tắc cá nhân. 1 khung đọc người. 1 bộ radar phòng vệ. Đó không phải "biết nhiều hơn" — đó là "nhìn khác đi."',
+sampleAnswer:'Câu chốt của toàn bộ hành trình: "Người học 36 kế ở tầng cao không nhằm thắng người khác trước, mà nhằm bớt thua vì mù tình huống, yếu tự chủ, và thiếu cấu trúc tư duy." 36 kế không biến bạn thành người mưu mẹo. Nó biến bạn thành người TỈNH hơn.',
+mistake:'Nghĩ học xong 30 ngày là "xong." Sai. Đây là ngày 1 của phần còn lại. Kiến thức chỉ có giá trị khi được luyện tập hằng ngày.',
+task:'Viết "Bản tuyên ngôn cá nhân sau 30 ngày" — 10 dòng: Tôi đã học được gì? Tôi sẽ thay đổi gì? Tôi cam kết điều gì? Lưu lại và đọc lại sau 30 ngày nữa.',
+questions:['Bạn sẽ dùng "hệ điều hành 36 kế" hằng ngày không?','Nguyên tắc nào bạn cam kết giữ dài hạn?','Nếu 30 ngày nữa nhìn lại, bạn muốn thấy mình thay đổi gì?','Bạn sẽ chia sẻ bài học nào cho 1 người quan trọng trong đời?'],
+keIds:[]}
+];
+
+// ===== TABS =====
+const TABS=[
+{id:'home',icon:'📊',label:'Tổng quan'},
+{id:'library',icon:'📚',label:'36 Kế'},
+{id:'roadmap',icon:'🗺️',label:'30 Ngày'},
+{id:'flash',icon:'🃏',label:'Flashcard'},
+{id:'quiz',icon:'❓',label:'Quiz'},
+{id:'defense',icon:'🛡️',label:'Phòng vệ'},
+{id:'principles',icon:'💎',label:'Nguyên tắc'},
+{id:'cases',icon:'📋',label:'Tình huống'},
+{id:'notebook',icon:'📓',label:'Số tay'},
+{id:'links',icon:'🔗',label:'Liên kết kế'},
+{id:'settings',icon:'⚙️',label:'Cài đặt'}
+];
+
+let currentTab='home',currentKeId=null,filterGroup='all',searchQ='';
+let flashIdx=0,flashFlip=false;
+let quizIdx=0,quizAns=null,quizScore=0,quizTotal=0;
+
+function render(){
+  document.getElementById('hStreak').textContent='🔥 '+S.streak;
+  document.getElementById('hPct').textContent=Math.round(S.completed.length/36*100)+'%';
+  document.getElementById('tabBar').innerHTML=TABS.map(t=>`<button class="tab ${currentTab===t.id?'active':''}" onclick="switchTab('${t.id}')">${t.icon} ${t.label}</button>`).join('');
+  document.body.className=S.theme==='light'?'light':'';
+  const fn={home:renderHome,library:renderLibrary,roadmap:renderRoadmap,flash:renderFlash,quiz:renderQuiz,defense:renderDefense,principles:renderPrinciples,cases:renderCases,notebook:renderNotebook,links:renderLinks,settings:renderSettings};
+  document.getElementById('main').innerHTML=(fn[currentTab]||renderHome)();
+}
+
+function switchTab(id){currentTab=id;currentKeId=null;render();window.scrollTo(0,0)}
+function closeModal(){document.getElementById('modalBg').classList.remove('show')}
+function openModal(html){document.getElementById('modalContent').innerHTML='<button class="close" onclick="closeModal()">×</button>'+html;document.getElementById('modalBg').classList.add('show')}
+function toggleComplete(id){const i=S.completed.indexOf(id);if(i>-1)S.completed.splice(i,1);else S.completed.push(id);markToday();save();render()}
+function toggleBookmark(id){const i=S.bookmarks.indexOf(id);if(i>-1)S.bookmarks.splice(i,1);else S.bookmarks.push(id);save();render()}
+function saveNote(id){const el=document.getElementById('note_'+id);if(el){S.notes[id]=el.value;save()}}
+
+// ===== HOME =====
+function renderHome(){
+  const pct=Math.round(S.completed.length/36*100);
+  const rdPct=Math.round(((S.daysDone||[]).length/30)*100);
+  const today=KE.find(k=>!S.completed.includes(k.id))||KE[0];
+  const nextDay=ROADMAP.find(d=>!(S.daysDone||[]).includes(d.day))||ROADMAP[0];
+  let h=`<div class="grid grid-2" style="margin-bottom:24px">
+    <div class="stat" style="background:linear-gradient(135deg,#d4a017,#f0c040)"><div class="lbl">Kế hoàn thành</div><div class="val">${S.completed.length}/36</div><div class="pbar"><div class="fill" style="width:${pct}%;background:#22c55e"></div></div></div>
+    <div class="stat" style="background:linear-gradient(135deg,#14b8a6,#0d9488)"><div class="lbl">Roadmap 30 ngày</div><div class="val">${rdPct}%</div><div class="pbar"><div class="fill" style="width:${rdPct}%;background:#fff"></div></div></div>
+    <div class="stat" style="background:linear-gradient(135deg,#a855f7,#7c3aed)"><div class="lbl">Chuỗi ngày</div><div class="val">🔥 ${S.streak}</div></div>
+    <div class="stat" style="background:linear-gradient(135deg,#3b82f6,#2563eb)"><div class="lbl">Bookmark</div><div class="val">⭐ ${S.bookmarks.length}</div></div>
+  </div>`;
+  h+=`<div class="card"><h3>🎯 Hôm Nay Nên Làm</h3>
+    <p style="margin:6px 0;font-size:14px">1. Học bài <strong style="color:var(--gold)">Ngày ${nextDay.day}: ${nextDay.title}</strong></p>
+    <p style="margin:6px 0;font-size:14px">2. Đọc kế <strong style="color:var(--gold)">#${today.id}: ${today.n}</strong></p>
+    <p style="margin:6px 0;font-size:14px">3. Ôn 1 thẻ Flashcard hoặc làm 1 câu Quiz</p>
+    <button class="btn btn-gold" style="margin-top:12px" onclick="markToday()">✓ Đánh dấu đã học hôm nay</button></div>`;
+  h+=`<div class="section-title" style="margin-top:20px">📈 Tiến Độ Theo Nhóm</div>`;
+  GROUPS.forEach(g=>{const t=KE.filter(k=>k.g===g.id).length;const d=KE.filter(k=>k.g===g.id&&S.completed.includes(k.id)).length;
+    h+=`<div class="card" style="cursor:pointer" onclick="filterGroup='${g.id}';switchTab('library')"><div style="display:flex;justify-content:space-between"><span style="font-weight:600;font-size:14px">${g.icon} ${g.id}: ${g.name}</span><span class="badge" style="background:${g.color}22;color:${g.color}">${d}/${t}</span></div><div class="pbar" style="margin-top:8px"><div class="fill" style="width:${d/t*100}%;background:${g.color}"></div></div></div>`;
+  });
+  return h;
+}
+
+// ===== LIBRARY =====
+function renderLibrary(){
+  if(currentKeId)return renderKeDetail(currentKeId);
+  let list=KE;
+  if(filterGroup!=='all')list=list.filter(k=>k.g===filterGroup);
+  if(searchQ){const s=searchQ.toLowerCase();list=list.filter(k=>k.n.toLowerCase().includes(s)||k.m.toLowerCase().includes(s)||k.essence.toLowerCase().includes(s)||(k.keywords||[]).some(w=>w.includes(s)))}
+  let h=`<div class="section-title">📚 Thư Viện 36 Kế</div>`;
+  h+=`<input class="inp" placeholder="🔍 Tìm kế..." value="${searchQ}" oninput="searchQ=this.value;render()" style="margin-bottom:14px">`;
+  h+=`<div class="filters"><button class="fpill ${filterGroup==='all'?'active':''}" onclick="filterGroup='all';render()">Tất cả</button>`;
+  GROUPS.forEach(g=>{h+=`<button class="fpill ${filterGroup===g.id?'active':''}" onclick="filterGroup='${g.id}';render()">${g.icon} ${g.id}</button>`});
+  h+=`</div><div class="grid grid-3">`;
+  list.forEach(ke=>{const g=GROUPS.find(x=>x.id===ke.g);const done=S.completed.includes(ke.id);const bk=S.bookmarks.includes(ke.id);
+    h+=`<div class="card ke-card" onclick="currentKeId=${ke.id};render();window.scrollTo(0,0)" style="${done?'opacity:.7;border-left:3px solid var(--green)':''}"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span class="ke-num">${ke.id}</span><div>${bk?'⭐':''}${done?' <span class="badge" style="background:#22c55e33;color:#22c55e">✓</span>':''}</div></div><span class="badge" style="background:${g.color}22;color:${g.color}">Nhóm ${g.id}</span><div class="ke-title">${ke.n}</div><div class="ke-meaning">"${ke.m}" · ${ke.han}</div><p style="margin:8px 0 0;font-size:12px;opacity:.7">${ke.essence.slice(0,80)}...</p></div>`;
+  });
+  h+=`</div>`;return h;
+}
+
+function renderKeDetail(id){
+  const ke=KE.find(k=>k.id===id);if(!ke)return'';
+  const g=GROUPS.find(x=>x.id===ke.g);const done=S.completed.includes(ke.id);const bk=S.bookmarks.includes(ke.id);
+  S.lastViewed=ke.id;save();
+  let h=`<button class="btn btn-outline btn-sm" onclick="currentKeId=null;render()" style="margin-bottom:16px">← Quay lại</button>`;
+  h+=`<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px"><span class="badge" style="background:${g.color}22;color:${g.color}">Nhóm ${g.id}: ${g.name}</span><span class="badge" style="background:var(--border);color:var(--text2)">${ke.han}</span>${done?'<span class="badge" style="background:#22c55e33;color:#22c55e">✓ Đã học</span>':''}</div>`;
+  h+=`<h2 style="color:var(--gold);margin:0 0 4px;font-size:22px">Kế #${ke.id}: ${ke.n}</h2>`;
+  h+=`<p style="color:var(--gold);opacity:.8;font-style:italic;margin:0 0 20px;font-size:15px">"${ke.m}"</p>`;
+  h+=`<div class="detail-section"><h4>⚡ Bản Chất</h4><p>${ke.essence}</p></div>`;
+  h+=`<div class="detail-section"><h4>🔑 Câu Nhớ Nhanh</h4><p style="font-weight:700;color:var(--gold)">${ke.remember}</p></div>`;
+  if(ke.related){h+=`<div class="detail-section"><h4>🔗 Kế Liên Quan</h4><div style="display:flex;gap:8px;flex-wrap:wrap">`;ke.related.forEach(rid=>{const r=KE.find(k=>k.id===rid);if(r)h+=`<button class="btn btn-outline btn-sm" onclick="currentKeId=${rid};render();window.scrollTo(0,0)">#${r.id} ${r.n}</button>`});h+=`</div></div>`}
+  h+=`<div class="detail-section"><h4>🤔 Câu Hỏi Phản Tư</h4>`;ke.questions.forEach((q,i)=>{h+=`<p style="margin:6px 0;padding-left:12px;border-left:3px solid var(--gold);font-size:14px">${i+1}. ${q}</p>`});h+=`</div>`;
+  h+=`<div class="detail-section"><h4>📓 Ghi Chú</h4><textarea class="inp" id="note_${ke.id}" placeholder="Ghi lại suy nghĩ..." onblur="saveNote(${ke.id})">${S.notes[ke.id]||''}</textarea></div>`;
+  h+=`<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px"><button class="btn ${done?'btn-green':'btn-gold'}" onclick="toggleComplete(${ke.id})">${done?'✓ Đã học':'Hoàn thành'}</button><button class="btn btn-outline" onclick="toggleBookmark(${ke.id})">${bk?'⭐ Bỏ bookmark':'☆ Bookmark'}</button></div>`;
+  return h;
+}
+
+// ===== ROADMAP 30 DAYS =====
+function renderRoadmap(){
+  const doneDays=(S.daysDone||[]);
+  const rdPct=Math.round(doneDays.length/30*100);
+  let h=`<div class="section-title">🗺️ Lộ Trình 30 Ngày Học 36 Kế</div>`;
+  h+=`<div class="card" style="margin-bottom:20px"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700">Tiến độ: ${doneDays.length}/30 ngày</span><span style="color:var(--gold);font-weight:700">${rdPct}%</span></div><div class="pbar" style="margin-top:8px"><div class="fill" style="width:${rdPct}%;background:var(--green)"></div></div></div>`;
+  const weekNames=['Tuần 1: Nền Tư Duy Chiến Lược','Tuần 2: Ứng Dụng Bản Thân & Công Việc','Tuần 3: Giao Tiếp – Đàm Phán – Đọc Người','Tuần 4: Phòng Vệ – Tích Hợp Hệ Tư Duy'];
+  [1,2,3,4].forEach(w=>{
+    h+=`<h3 style="color:var(--gold);font-size:15px;margin:20px 0 10px">${weekNames[w-1]}</h3><div class="grid grid-4">`;
+    ROADMAP.filter(d=>d.week===w).forEach(d=>{
+      const done=doneDays.includes(d.day);
+      h+=`<div class="card day-card ${done?'done':''}" onclick="openDayModal(${d.day})"><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;font-size:13px;color:var(--gold)">Ngày ${d.day}</span>${done?'<span style="color:var(--green);font-weight:700">✓</span>':''}</div><div style="font-size:13px;margin-top:4px;line-height:1.4">${d.title}</div></div>`;
+    });
+    h+=`</div>`;
+  });
+  return h;
+}
+
+function openDayModal(dayNum){
+  const d=ROADMAP.find(x=>x.day===dayNum);if(!d)return;
+  const done=(S.daysDone||[]).includes(d.day);
+  let h=`<h2 style="color:var(--gold);margin-bottom:4px;font-size:20px">Ngày ${d.day}: ${d.title}</h2>`;
+  h+=`<p style="opacity:.7;font-size:13px;margin-bottom:20px">Tuần ${d.week} · ${d.focus}</p>`;
+  h+=`<div class="detail-section"><h4>🎯 Mục Tiêu</h4><p>${d.goal}</p></div>`;
+  h+=`<div class="detail-section"><h4>📖 Giải Thích Dễ Hiểu</h4><p>${d.explain}</p></div>`;
+  h+=`<div class="detail-section" style="border-left-color:var(--teal)"><h4>📋 Ví Dụ Minh Họa</h4><p>${d.example}</p></div>`;
+  h+=`<div class="detail-section" style="border-left-color:var(--green)"><h4>💡 Giải Đáp Tham Khảo</h4><p>${d.sampleAnswer}</p></div>`;
+  h+=`<div class="detail-section" style="border-left-color:var(--red)"><h4>⚠️ Sai Lầm Thường Gặp</h4><p>${d.mistake}</p></div>`;
+  h+=`<div class="detail-section"><h4>📝 Bài Tập</h4><p>${d.task}</p></div>`;
+  if(d.keIds&&d.keIds.length>0){h+=`<div class="detail-section"><h4>📚 Kế Cần Học</h4><div style="display:flex;gap:6px;flex-wrap:wrap">`;d.keIds.forEach(id=>{const k=KE.find(x=>x.id===id);if(k)h+=`<span class="badge" style="background:var(--gold)22;color:var(--gold)">#${id} ${k.n}</span>`});h+=`</div></div>`}
+  h+=`<div class="detail-section"><h4>🤔 Câu Hỏi Phản Tư</h4>`;(d.questions||[]).forEach((q,i)=>{h+=`<p style="margin:6px 0;padding-left:12px;border-left:3px solid var(--gold);font-size:14px">${i+1}. ${q}</p>`});h+=`</div>`;
+  h+=`<div class="detail-section"><h4>📓 Ghi Chú Ngày ${d.day}</h4><textarea class="inp" id="note_day${d.day}" placeholder="Ghi lại bài học hôm nay..." onblur="S.notes['day${d.day}']=this.value;save()">${S.notes['day'+d.day]||''}</textarea></div>`;
+  h+=`<button class="btn ${done?'btn-green':'btn-gold'}" style="width:100%;margin-top:12px" onclick="if(!S.daysDone)S.daysDone=[];const i=S.daysDone.indexOf(${d.day});if(i>-1)S.daysDone.splice(i,1);else S.daysDone.push(${d.day});markToday();save();closeModal();render()">${done?'✓ Đã hoàn thành ngày này':'Đánh dấu hoàn thành'}</button>`;
+  openModal(h);
+}
+
+// ===== FLASHCARD =====
+function renderFlash(){
+  const list=S.bookmarks.length>0?KE.filter(k=>S.bookmarks.includes(k.id)):KE;
+  const ke=list[((flashIdx%list.length)+list.length)%list.length];
+  let h=`<div class="section-title">🃏 Flashcard Ôn Tập</div>`;
+  h+=`<p style="font-size:13px;opacity:.7;margin-bottom:16px">${S.bookmarks.length>0?`Ôn ${S.bookmarks.length} kế bookmark`:'Ôn tất cả 36 kế'} · Thẻ ${((flashIdx%list.length)+list.length)%list.length+1}/${list.length}</p>`;
+  h+=`<div class="flash-card" onclick="flashFlip=!flashFlip;render()">`;
+  if(!flashFlip){h+=`<div style="font-size:48px;margin-bottom:12px">${GROUPS.find(g=>g.id===ke.g)?.icon||'⚔️'}</div><h3 style="color:var(--gold);font-size:20px;margin-bottom:8px">Kế #${ke.id}: ${ke.n}</h3><p style="opacity:.6;font-style:italic">${ke.han}</p><p style="font-size:12px;opacity:.4;margin-top:16px">Nhấn để xem đáp án</p>`}
+  else{h+=`<p style="font-weight:700;color:var(--gold);margin-bottom:8px;font-size:16px">"${ke.m}"</p><p style="font-size:14px;line-height:1.7">${ke.essence}</p><p style="font-size:13px;margin-top:12px;font-style:italic;opacity:.8">💡 ${ke.remember}</p><p style="font-size:12px;opacity:.4;margin-top:12px">Nhấn để lật lại</p>`}
+  h+=`</div><div style="display:flex;gap:12px;justify-content:center;margin-top:20px">
+    <button class="btn btn-outline" onclick="flashIdx--;flashFlip=false;render()">← Trước</button>
+    <button class="btn btn-outline" onclick="flashIdx=Math.floor(Math.random()*${list.length});flashFlip=false;render()">🔀 Ngẫu nhiên</button>
+    <button class="btn btn-gold" onclick="flashIdx++;flashFlip=false;render()">Tiếp →</button></div>`;
+  return h;
+}
+
+// ===== QUIZ =====
+const QB=[
+{q:'36 kế là gì?',o:['Nguyên văn Binh pháp Tôn Tử','Tập mưu lược cổ điển tác giả không rõ','Sách mới viết gần đây','Triết lý Lão Tử'],c:1,e:'36 kế KHÔNG phải nguyên văn Binh pháp Tôn Tử.'},
+{q:'Dĩ dật đãi lao nghĩa gì?',o:['Đánh lúc yếu','Lấy nhàn chờ mệt','Chạy nhanh thắng','Giả vờ yếu'],c:1,e:'Giữ sức, chuẩn bị kỹ, đợi đối thủ tự hao.'},
+{q:'Kế nào dạy dùng đòn bẩy hệ thống?',o:['Tá đao sát nhân','Man thiên quá hải','Kim thiền thoát xác','Tẩu vi thượng sách'],c:0,e:'Tá đao sát nhân = mượn lực hệ thống.'},
+{q:'Đối tác quá ngọt nhưng né văn bản — kế nào?',o:['Tiếu lý tàng đao','Mỹ nhân kế','Không thành kế','Tẩu vi thượng sách'],c:0,e:'Cười ngoài giấu dao — ngọt miệng, mờ giấy.'},
+{q:'Kế nào dạy xử đầu não thay tiểu tiết?',o:['Cầm tặc cầm vương','Thanh đông kích tây','Phản gián kế','Thuận thủ khiên dương'],c:0,e:'Bắt vua = xử nút thắt, không vá lỗi.'},
+{q:'Phủ để trừu tân nghĩa gì?',o:['Rút củi đáy nồi','Đóng cửa bắt giặc','Ném gạch gọi ngọc','Che trời qua biển'],c:0,e:'Rút củi = cắt nguồn nuôi vấn đề.'},
+{q:'Đối thủ mạnh về giá — dùng kế nào?',o:['Điệu hổ ly sơn','Tẩu vi thượng sách','Không thành kế','Man thiên quá hải'],c:0,e:'Đổi sân sang trải nghiệm, dịch vụ — nơi bạn mạnh.'},
+{q:'Ban đầu deal thoải mái, sau siết — kế gì?',o:['Dục cầm cố túng','Tiếu lý tàng đao','Phao chuyên dẫn ngọc','Liên hoàn kế'],c:0,e:'Vào dễ, ra khó. Hỏi: điều kiện dừng?'},
+{q:'BATNA là gì?',o:['Phương án thay thế tốt nhất','Bảng phân tích kỹ thuật','Chiến lược marketing','Biểu đồ doanh thu'],c:0,e:'Không có BATNA = dễ bị ép.'},
+{q:'Ai liên tục "báo tin mật" trong đội — kế gì?',o:['Phản gián kế','Tá đao sát nhân','Cách ngạn quan hỏa','Thuận thủ khiên dương'],c:0,e:'Phản gián = dùng thông tin chia rẽ. Giải: 1 đầu mối, 1 biên bản.'},
+];
+
+function renderQuiz(){
+  const q=QB[quizIdx%QB.length];
+  let h=`<div class="section-title">❓ Quiz Kiểm Tra</div>`;
+  h+=`<p style="font-size:13px;opacity:.7;margin-bottom:16px">Câu ${quizIdx%QB.length+1}/${QB.length} · Đúng: ${quizScore}/${quizTotal}</p>`;
+  h+=`<div class="card"><p style="font-weight:700;color:var(--gold);font-size:15px;margin-bottom:16px">${q.q}</p>`;
+  q.o.forEach((opt,i)=>{let cls='quiz-opt';if(quizAns!==null){if(i===q.c)cls+=' correct';if(quizAns===i&&i!==q.c)cls+=' wrong'}
+    h+=`<div class="${cls}" onclick="if(quizAns===null){quizAns=${i};quizTotal++;if(${i}===${q.c})quizScore++;render()}">${opt}</div>`;});
+  if(quizAns!==null){h+=`<div style="margin-top:14px;padding:12px;background:var(--card2);border-radius:8px"><p style="color:${quizAns===q.c?'var(--green)':'var(--red)'};font-weight:700;margin-bottom:6px">${quizAns===q.c?'✓ Chính xác!':'✗ Chưa đúng'}</p><p style="font-size:13px;opacity:.8">${q.e}</p></div><button class="btn btn-gold" style="margin-top:12px" onclick="quizIdx++;quizAns=null;render()">Câu tiếp →</button>`}
+  h+=`</div>`;
+  if(quizTotal>0){h+=`<div class="card" style="margin-top:16px"><h4>📊 Thống Kê</h4><p>Đúng: ${quizScore}/${quizTotal} (${Math.round(quizScore/quizTotal*100)}%)</p><button class="btn btn-outline btn-sm" style="margin-top:8px" onclick="quizIdx=0;quizAns=null;quizScore=0;quizTotal=0;render()">🔄 Làm lại</button></div>`}
+  return h;
+}
+
+// ===== DEFENSE =====
+function renderDefense(){
+  let h=`<div class="section-title">🛡️ Phòng Vệ & Đàm Phán</div>`;
+  h+=`<div class="card" style="border-left:4px solid var(--red)"><h3 style="color:var(--red)">⚠️ 5 Điểm Mù Đối Tác Xấu Khai Thác</h3><p style="font-size:14px;line-height:2">1. <strong>Thiện cảm giả</strong> — quá ngọt nhưng quá mờ<br>2. <strong>Thông tin méo</strong> — mỗi người nghe 1 kiểu<br>3. <strong>Áp lực thời gian</strong> — ép ký nhanh<br>4. <strong>Mất BATNA</strong> — không có đường lui<br>5. <strong>Đội bị chia</strong> — nội bộ mất đồng thuận</p></div>`;
+  h+=`<div class="card" style="border-left:4px solid var(--gold)"><h3>🔑 7 Nguyên Tắc Phòng Vệ</h3>`;
+  ['Không đàm phán khi không có BATNA','Phải có reservation point trước','Mọi áp lực thời gian đều phải nghi ngờ','Tách con người khỏi điều khoản','Không để thông tin phân mảnh','Không để điều khoản ở phụ lục mờ','Thấy chuỗi tactic → dừng bàn'].forEach((r,i)=>{h+=`<div class="chk"><input type="checkbox"><span style="font-size:14px"><strong>${i+1}.</strong> ${r}</span></div>`});
+  h+=`</div>`;
+  h+=`<div class="card" style="border-left:4px solid var(--red)"><h3 style="color:var(--red)">🚨 7 Dấu Hiệu Dừng Ký</h3>`;
+  ['Ép ký nhanh','Né văn bản','Điều khoản mờ','Nói nhiều hơn chứng minh','Deal ngoài luồng','Đổi điều kiện phút cuối','Càng gần ký càng bất an'].forEach(s=>{h+=`<p style="margin:6px 0;font-size:14px">🔴 ${s}</p>`});
+  h+=`</div>`;
+  h+=`<div class="card" style="border-left:4px solid var(--green)"><h3 style="color:var(--green)">✅ 5 Câu Bắt Buộc Trước Ký</h3>`;
+  ['Ai quyết định thật?','Tiêu chí nghiệm thu?','Phát sinh chi phí ở đâu?','Nếu dừng, ai chịu gì?','Hứa đã vào văn bản chưa?'].forEach((q,i)=>{h+=`<div class="chk"><input type="checkbox"><span style="font-size:14px"><strong>${i+1}.</strong> ${q}</span></div>`});
+  h+=`</div>`;
+  h+=`<div class="card" style="border-left:4px solid var(--blue)"><h3>📋 Checklist 15 Phút Rà Deal</h3>
+    <p style="font-size:14px;line-height:2"><strong style="color:var(--gold)">Rà người:</strong> Ai quyết thật? Ai truyền đạt? Ai gây áp lực?<br>
+    <strong style="color:var(--gold)">Rà hợp đồng:</strong> Giá, phạm vi, nghiệm thu, phát sinh, điều kiện dừng, sở hữu dữ liệu?<br>
+    <strong style="color:var(--gold)">Rà tâm lý:</strong> Có quá thích deal? Sợ mất cơ hội? Bị ép giờ? Đủ bình tĩnh nói "không"?<br>
+    <strong style="color:var(--gold)">Rà hệ thống:</strong> BATNA còn? Nội bộ cùng sự thật? Nếu fail có đường khác?</p></div>`;
+  return h;
+}
+
+// ===== PRINCIPLES =====
+function renderPrinciples(){
+  const principles=[
+    {name:'Đừng luôn đánh trực diện',explain:'Bài toán khó thường mở bằng đường vòng đúng.',example:'Đối thủ mạnh về giá → đổi sân sang trải nghiệm.',mistake:'Cố tấn công điểm mạnh nhất của đối thủ.',remember:'Đường vòng đúng = đường ngắn nhất.'},
+    {name:'Chọn sân chơi trước cách chơi',explain:'Sai sân thì giỏi cũng khó thắng.',example:'Startup không cạnh tranh với tập đoàn ở sân họ — đi ngách.',mistake:'Lao vào cuộc chơi mà không xem sân có lợi không.',remember:'Đổi sân trước khi đổi chiêu.'},
+    {name:'Giữ lực là chiến lược',explain:'Không phải lúc nào tiến cũng tốt hơn chờ.',example:'Warren Buffett giữ tiền mặt chờ cơ hội, không ôm mọi deal.',mistake:'Đốt hết năng lượng vào mọi cơ hội xuất hiện.',remember:'Không thi sức ở phút đầu.'},
+    {name:'Đánh vào gốc, không nghiện sửa ngọn',explain:'Vấn đề lặp lại = đang sửa sai chỗ.',example:'Nhân viên sai → sửa SOP trước khi phạt.',mistake:'Chữa cháy liên tục mà không tìm nguyên nhân.',remember:'Rút củi, đừng dập lửa.'},
+    {name:'Sức mạnh nằm ở đòn bẩy',explain:'Người, hệ thống, quy trình, công nghệ — tất cả là đòn bẩy.',example:'Dùng SOP, dashboard, case study thay vì nói miệng.',mistake:'Tự ôm hết vì sợ mất kiểm soát.',remember:'Tăng đòn bẩy, không chỉ tăng sức.'},
+    {name:'Quản trị chú ý = quản trị cục diện',explain:'Ai kiểm soát sự chú ý, kiểm soát cuộc chơi.',example:'Trong họp, xử căng thẳng bề mặt trước để mở không gian giải bài gốc.',mistake:'Bị kéo vào chuyện phụ mà quên mục tiêu thật.',remember:'Chú ý ≠ mục tiêu thật.'},
+    {name:'Biến động chứa cơ hội cho người tỉnh',explain:'Khi hệ thống rối, trật tự cũ yếu đi, cơ hội mở ra.',example:'Zoom nổi lên trong COVID. Ai tỉnh nhất hưởng lợi nhất.',mistake:'Co lại khi rối. Hoặc trục lợi phi đạo đức.',remember:'Trong hỗn loạn, ai tỉnh là người giàu.'},
+    {name:'Đọc hành vi, không chỉ lời nói',explain:'Người ta có thể nói dối, nhưng mẫu hành vi lặp lại thì không.',example:'Đối tác hứa nhiều nhưng không bao giờ chốt văn bản = cảnh báo.',mistake:'Tin lời nói đẹp mà bỏ qua hành vi mâu thuẫn.',remember:'Đọc cam kết, không đọc cảm xúc.'},
+    {name:'Chiến lược = chuỗi hành động, không phải mẹo lẻ',explain:'Kết quả lớn là sản phẩm của quy trình đúng, lặp đủ.',example:'Marketing funnel: nội dung → lead → tư vấn → chốt → chăm sóc.',mistake:'Mong 1 chiêu thắng lớn. Không có chiêu thần kỳ.',remember:'Chiến lược là chuỗi, không phải mẹo.'},
+    {name:'Lùi đúng lúc = một dạng thắng',explain:'Biết dừng đúng lúc là trí tuệ, không phải thất bại.',example:'Nokia bán điện thoại cho Microsoft — rút đúng lúc, bảo toàn công ty.',mistake:'Cố vì sĩ diện khi mọi tín hiệu nói nên đi.',remember:'Lui để còn lực tiến.'}
+  ];
+  let html=`<div class="section-title">💎 10 Nguyên Tắc Chiến Lược Cốt Lõi</div>`;
+  principles.forEach((p,i)=>{
+    html+=`<div class="card"><h3>${i+1}. ${p.name}</h3>
+      <p style="font-size:14px;margin-bottom:8px">${p.explain}</p>
+      <p style="font-size:13px;color:var(--teal)"><strong>Ví dụ:</strong> ${p.example}</p>
+      <p style="font-size:13px;color:var(--red);margin-top:4px"><strong>Sai lầm:</strong> ${p.mistake}</p>
+      <p style="font-size:13px;color:var(--gold);margin-top:4px"><strong>💡</strong> ${p.remember}</p>
+    </div>`;
+  });
+
+  html+=`<div class="card" style="border-left:4px solid var(--gold);margin-top:20px"><h3>🧭 Hệ Điều Hành Tư Duy Hằng Ngày</h3>
+    <p style="font-weight:700;font-size:13px;color:var(--gold);margin-top:12px">☀️ Mỗi Sáng — 5 Câu Hỏi:</p>
+    <p style="font-size:13px;margin:4px 0 4px 12px">1. Thế trận hôm nay? (mạnh/yếu/mơ hồ)</p>
+    <p style="font-size:13px;margin:4px 0 4px 12px">2. Điểm gốc là gì?</p>
+    <p style="font-size:13px;margin:4px 0 4px 12px">3. Sân chơi nào phù hợp?</p>
+    <p style="font-size:13px;margin:4px 0 4px 12px">4. Đòn bẩy nào đang bị bỏ?</p>
+    <p style="font-size:13px;margin:4px 0 4px 12px">5. Tiến / chờ / lui?</p>
+    <p style="font-weight:700;font-size:13px;color:var(--gold);margin-top:12px">🌙 Mỗi Tối — 5 Câu Hỏi:</p>
+    <p style="font-size:13px;margin:4px 0 4px 12px">1. Bị dắt bởi cảm xúc nào?</p>
+    <p style="font-size:13px;margin:4px 0 4px 12px">2. Đọc qua lời hay hành vi?</p>
+    <p style="font-size:13px;margin:4px 0 4px 12px">3. Bỏ lỡ cơ hội nhỏ nào?</p>
+    <p style="font-size:13px;margin:4px 0 4px 12px">4. Ôm cuộc chiến không đáng?</p>
+    <p style="font-size:13px;margin:4px 0 4px 12px">5. Kế nào cho ngày mai?</p>
+  </div>`;
+  return html;
+}
+// ========== CASES ==========
+function renderCases(){
+  const cases=[
+    {title:'Đối thủ giảm giá mạnh',desc:'Đối thủ lớn bất ngờ giảm giá 30%. Bạn không có ngân sách theo.',suggest:[15,2,4],answer:'Điệu hổ ly sơn (đổi sân sang trải nghiệm/dịch vụ), Vi Ngụy cứu Triệu (đánh vào hậu mãi — điểm yếu của họ), Dĩ dật đãi lao (giữ lực, đợi họ kiệt sức).'},
+    {title:'Đối tác né văn bản',desc:'Đối tác rất thân thiện nhưng luôn tìm cách tránh chốt bằng email/văn bản.',suggest:[10,33,16],answer:'Tiếu lý tàng đao (cười giấu dao) — họ có thể đang giấu ý đồ. Yêu cầu: "Anh/chị giúp em chốt lại bằng email nhé."'},
+    {title:'Nhân viên lặp lỗi',desc:'Một nhân viên liên tục mắc lỗi tương tự dù đã được nhắc nhiều lần.',suggest:[19,18,25],answer:'Phủ để trừu tân (rút củi) — có thể lỗi SOP, không phải lỗi người. Cầm tặc cầm vương — tìm gốc rễ. Thâu lương hoán trụ — đổi quy trình.'},
+    {title:'Bị ép ký gấp',desc:'Đối tác bảo: "Deal này chỉ có hiệu lực đến cuối tuần."',suggest:[28,4,35],answer:'Dấu hiệu Thượng ốc trừu thê + áp lực thời gian. Trả lời: "Em không quyết dưới áp lực thời gian. Mình cần đủ thông tin."'},
+    {title:'Vendor dần nắm mọi thứ',desc:'Vendor IT ban đầu chỉ làm 1 module, giờ nắm toàn bộ hệ thống, bạn phụ thuộc hoàn toàn.',suggest:[30,3,24],answer:'Phản khách vi chủ — họ đang từ khách thành chủ. Đặt governance, dashboard độc lập, cơ chế thay thế.'},
+    {title:'Sếp mới thay đổi mọi thứ',desc:'Sếp mới vào, thay đổi liên tục không rõ định hướng, đội rối.',suggest:[9,20,27],answer:'Cách ngạn quan hỏa (quan sát trước). Hỗn thủy mạc ngư (trong rối, ai rõ ràng = dẫn dắt). Giả si bất điên (quan sát, chưa vội phản ứng).'},
+    {title:'Khách không chốt dù giá tốt',desc:'Đã giảm giá, thêm ưu đãi nhưng khách vẫn không chốt.',suggest:[18,17,2],answer:'Cầm tặc cầm vương — vấn đề không phải giá, có thể là niềm tin. Phao chuyên dẫn ngọc — cho giá trị trước (case study, demo). Vi Ngụy — đánh vào nỗi lo thật.'},
+    {title:'Nội bộ mất tin nhau',desc:'Đội sale và kỹ thuật mâu thuẫn, mỗi bên hiểu một kiểu.',suggest:[33,22,19],answer:'Phản gián kế — thông tin bị méo. Lập 1 đầu mối, 1 biên bản chung. Quan môn tróc tặc — khoanh phạm vi xử dứt điểm.'},
+    {title:'Muốn chuyển ngành',desc:'Bạn muốn chuyển từ kỹ thuật sang quản lý nhưng không ai cho cơ hội.',suggest:[8,17,29],answer:'Ám độ Trần Thương (đường vòng) — lead dự án nhỏ trước. Phao chuyên dẫn ngọc — cho trước giá trị quản lý. Thụ thượng khai hoa — trình bày thành tích rõ hơn.'},
+  ];
+  let html=`<div class="section-title">📋 Tình Huống Thực Chiến</div>
+    <p style="font-size:14px;opacity:.7;margin-bottom:16px">Chọn tình huống để xem kế gợi ý và cách phân tích.</p>`;
+  cases.forEach((c,i)=>{
+    html+=`<div class="card" style="cursor:pointer" onclick="openCaseModal(${i})">
+      <h3 style="margin-bottom:6px">${c.title}</h3>
+      <p style="font-size:13px;opacity:.7">${c.desc}</p>
+      <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">${c.suggest.map(id=>{const k=KE.find(x=>x.id===id);return`<span class="badge" style="background:var(--gold)22;color:var(--gold)">#${id} ${k?.n||''}</span>`}).join('')}</div>
+    </div>`;
+  });
+  return html;
+
+  // expose to global
+  window._cases=cases;
+}
+
+function openCaseModal(idx){
+  // regenerate cases array here since function scope
+  const cases=[
+    {title:'Đối thủ giảm giá mạnh',desc:'Đối thủ lớn bất ngờ giảm giá 30%. Bạn không có ngân sách theo.',suggest:[15,2,4],answer:'Điệu hổ ly sơn (đổi sân sang trải nghiệm/dịch vụ), Vi Ngụy cứu Triệu (đánh vào hậu mãi — điểm yếu của họ), Dĩ dật đãi lao (giữ lực, đợi họ kiệt sức).'},
+    {title:'Đối tác né văn bản',desc:'Đối tác rất thân thiện nhưng luôn tìm cách tránh chốt bằng email/văn bản.',suggest:[10,33,16],answer:'Tiếu lý tàng đao — họ có thể đang giấu ý đồ. Yêu cầu: "Anh/chị giúp em chốt lại bằng email nhé."'},
+    {title:'Nhân viên lặp lỗi',desc:'Nhân viên liên tục mắc lỗi tương tự dù đã nhắc.',suggest:[19,18,25],answer:'Phủ để trừu tân — lỗi SOP, không phải lỗi người. Cầm tặc cầm vương — tìm gốc rễ.'},
+    {title:'Bị ép ký gấp',desc:'"Deal này chỉ có hiệu lực đến cuối tuần."',suggest:[28,4,35],answer:'Dấu hiệu áp lực thời gian. Trả lời: "Em không quyết dưới áp lực."'},
+    {title:'Vendor dần nắm mọi thứ',desc:'Vendor ban đầu làm 1 module, giờ nắm toàn bộ hệ thống.',suggest:[30,3,24],answer:'Phản khách vi chủ. Đặt governance, dashboard độc lập.'},
+    {title:'Sếp mới thay đổi liên tục',desc:'Sếp mới vào, đội rối.',suggest:[9,20,27],answer:'Quan sát trước. Trong rối, ai rõ ràng = dẫn dắt.'},
+    {title:'Khách không chốt dù giá tốt',desc:'Đã giảm giá nhưng khách vẫn không chốt.',suggest:[18,17,2],answer:'Vấn đề không phải giá, có thể là niềm tin. Cho giá trị trước.'},
+    {title:'Nội bộ mất tin nhau',desc:'Sale và kỹ thuật mâu thuẫn.',suggest:[33,22,19],answer:'Thông tin bị méo. Lập 1 đầu mối, 1 biên bản chung.'},
+    {title:'Muốn chuyển ngành',desc:'Muốn chuyển từ kỹ thuật sang quản lý.',suggest:[8,17,29],answer:'Đường vòng: lead dự án nhỏ trước. Cho trước giá trị quản lý.'},
+  ];
+  const c=cases[idx];if(!c)return;
+  let html=`<h2 style="color:var(--gold);margin-bottom:12px">${c.title}</h2>
+    <div class="detail-section"><h4>📖 Tình Huống</h4><p>${c.desc}</p></div>
+    <div class="detail-section"><h4>🎯 Kế Gợi Ý</h4><div style="display:flex;gap:8px;flex-wrap:wrap">`;
+  c.suggest.forEach(id=>{const k=KE.find(x=>x.id===id);if(k)html+=`<span class="badge" style="background:var(--gold)22;color:var(--gold)">#${id} ${k.n}</span>`});
+  html+=`</div></div>`;
+  html+=`<div class="detail-section" style="border-left-color:var(--green)"><h4>💡 Phân Tích & Gợi Ý</h4><p>${c.answer}</p></div>`;
+  openModal(html);
+}
+
+// ========== NOTEBOOK ==========
+function renderNotebook(){
+  let html=`<div class="section-title">📓 Sổ Tay Cá Nhân</div>`;
+  html+=`<div class="card"><h3>Thêm ghi chú mới</h3>
+    <input class="inp" id="nbTitle" placeholder="Tiêu đề..." style="margin-bottom:8px;border-radius:8px">
+    <textarea class="inp" id="nbContent" placeholder="Nội dung ghi chú..." style="margin-bottom:8px"></textarea>
+    <button class="btn btn-gold" onclick="addNotebook()">💾 Lưu ghi chú</button>
+  </div>`;
+  if(S.notebook&&S.notebook.length>0){
+    html+=`<div class="section-title" style="margin-top:20px">📋 Ghi chú đã lưu (${S.notebook.length})</div>`;
+    S.notebook.slice().reverse().forEach((nb,i)=>{
+      const realIdx=S.notebook.length-1-i;
+      html+=`<div class="card"><div style="display:flex;justify-content:space-between;align-items:center">
+        <h4 style="margin:0">${nb.title||'Không tiêu đề'}</h4>
+        <button class="btn btn-sm" style="background:var(--red);color:#fff;padding:4px 10px" onclick="S.notebook.splice(${realIdx},1);save();render()">🗑️</button>
+      </div><p style="font-size:14px;margin-top:8px;white-space:pre-wrap">${nb.content}</p>
+      <p style="font-size:11px;opacity:.5;margin-top:6px">${nb.date}</p></div>`;
+    });
+  }else{
+    html+=`<div class="card" style="text-align:center;opacity:.5;padding:40px"><p>Chưa có ghi chú nào.</p></div>`;
+  }
+  return html;
+}
+
+function addNotebook(){
+  const t=document.getElementById('nbTitle');
+  const c=document.getElementById('nbContent');
+  if(!c.value.trim())return;
+  if(!S.notebook)S.notebook=[];
+  S.notebook.push({title:t.value,content:c.value,date:new Date().toLocaleString('vi-VN')});
+  save();render();
+}
+
+// ========== LINKS ==========
+function renderLinks(){
+  let html=`<div class="section-title">🔗 Liên Kết Giữa Các Kế</div>
+    <p style="font-size:14px;opacity:.7;margin-bottom:16px">Xem kế nào liên quan, bổ trợ hoặc đối lập nhau.</p>`;
+  KE.forEach(ke=>{
+    if(!ke.related||ke.related.length===0)return;
+    html+=`<div class="card"><h4 style="margin-bottom:8px">#${ke.id} ${ke.n}</h4>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">`;
+    ke.related.forEach(rid=>{
+      const r=KE.find(k=>k.id===rid);
+      if(r)html+=`<button class="btn btn-outline btn-sm" onclick="currentKeId=${rid};switchTab('library')">#${r.id} ${r.n}</button>`;
+    });
+    html+=`</div></div>`;
+  });
+  return html;
+}
+
+// ===== SETTINGS =====
+function renderSettings(){
+  const sz=new Blob([localStorage.getItem(LS)||'']).size;
+  let h=`<div class="section-title">⚙️ Cài Đặt</div>`;
+  h+=`<div class="card"><h3>🎨 Giao Diện</h3><div style="display:flex;gap:10px;margin-top:8px"><button class="btn ${S.theme==='dark'?'btn-gold':'btn-outline'}" onclick="S.theme='dark';save();render()">🌙 Tối</button><button class="btn ${S.theme==='light'?'btn-gold':'btn-outline'}" onclick="S.theme='light';save();render()">☀️ Sáng</button></div></div>`;
+  h+=`<div class="card"><h3>💾 Dữ Liệu</h3><p style="font-size:13px;opacity:.7;margin-bottom:12px">Dung lượng: ${(sz/1024).toFixed(1)} KB</p><div style="display:flex;gap:10px;flex-wrap:wrap">
+    <button class="btn btn-gold" onclick="const d=JSON.stringify(S,null,2);const b=new Blob([d],{type:'application/json'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download='36ke-'+new Date().toISOString().split('T')[0]+'.json';a.click()">📤 Xuất</button>
+    <button class="btn btn-outline" onclick="document.getElementById('impF').click()">📥 Nhập</button>
+    <button class="btn btn-red" onclick="if(confirm('Xóa toàn bộ?')&&confirm('XÁC NHẬN LẦN 2?')){localStorage.removeItem('${LS}');S={completed:[],bookmarks:[],notes:{},streak:0,lastDate:'',theme:'dark',daysDone:[],quizHistory:[],hardCards:[],notebook:[],lastViewed:null};render()}">🗑️ Xóa</button></div>
+    <input type="file" id="impF" accept=".json" style="display:none" onchange="const f=this.files[0];if(!f)return;const r=new FileReader();r.onload=function(e){try{Object.assign(S,JSON.parse(e.target.result));save();render();alert('✓ OK')}catch(x){alert('✗ Lỗi')}};r.readAsText(f)"></div>`;
+  h+=`<div class="card"><h3>📊 Thống Kê</h3><p style="font-size:14px">Kế: ${S.completed.length}/36 · Roadmap: ${(S.daysDone||[]).length}/30 · Streak: ${S.streak} · Bookmark: ${S.bookmarks.length} · Ghi chú: ${Object.keys(S.notes).length}</p></div>`;
+  h+=`<div class="card" style="opacity:.6"><p style="font-size:12px">© 2024 36 Kế Pro · Offline · Dữ liệu trên thiết bị · Học để phát triển, không thao túng.</p></div>`;
+  return h;
+}
+
+render();
+</script>
+</body>
+</html>
